@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
@@ -43,7 +43,7 @@ export default function Login(props) {
         },
         body: JSON.stringify({ username, password }),
       });
-      if (res.status === 200) return router.push("/dashboard");
+      if (res.status === 200) return router.push("/");
       const { error: message } = await res.json();
       setError(message);
     } catch (err) {
@@ -62,7 +62,7 @@ export default function Login(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to the <a href="https://nextjs.org">Next.js</a> Login Page!
+          Welcome to expire! Please Login!
         </h1>
 
         <p className={styles.description}>
@@ -103,16 +103,7 @@ export default function Login(props) {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+       
       </footer>
     </div>
   );
