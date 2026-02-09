@@ -44,7 +44,7 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to expire! Your Food Inventory App
         </h1>
 
         {/* Landing page content */}
@@ -58,10 +58,16 @@ export default function Home(props) {
             fontFamily: "Arial, sans-serif",
           }}
         >
-          <h1>Welcome to the Food Search App</h1>
+          <h1>Just Eat It!!</h1>
           <p>Search for foods and save them with expiration dates.</p>
           <button
-            onClick={() => router.push("/searchFoods")}
+            onClick={() => {
+              if (props.isLoggedIn) {
+                router.push("/searchFoods");
+              } else { 
+                router.push("/login");
+              }
+            }}
             style={{
               padding: "1rem 2rem",
               backgroundColor: "#0070f3",

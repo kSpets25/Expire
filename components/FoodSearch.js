@@ -1,7 +1,7 @@
 // pages/searchFoods.js
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Header from "../components/header";
+
 
 export default function FoodSearch() {
   const [barcode, setBarcode] = useState("");
@@ -89,7 +89,7 @@ export default function FoodSearch() {
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <Header />
+      
 
       {/* Search inputs */}
       <div style={{ marginBottom: "1rem" }}>
