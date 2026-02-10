@@ -1,4 +1,3 @@
-
 // pages/api/foods.js
 import { withIronSessionApiRoute } from "iron-session/next";
 import sessionOptions from "../../config/session";

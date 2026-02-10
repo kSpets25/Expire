@@ -1,9 +1,10 @@
-// db/models/Food.js
+// db/models/foods.js
 import mongoose from "mongoose";
 
 const FoodSchema = new mongoose.Schema(
   {
-    code: { type: String, required: true, unique: true },
+    userId: { type: String, required: true }, // new: associate with logged-in user
+    code: { type: String, required: true },
     product_name: String,
     brands: String,
     nutriscore_grade: String,
@@ -15,7 +16,4 @@ const FoodSchema = new mongoose.Schema(
 );
 
 // Prevent model overwrite on hot reload
-export default mongoose.models.Food ||
-  mongoose.model("Food", FoodSchema);
-
-
+export default mongoose.models.Food || mongoose.model("Food", FoodSchema);

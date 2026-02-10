@@ -7,39 +7,49 @@ import sessionOptions from "../config/session";
 import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import useLogout from "../hooks/useLogout";
-import { useEffect, useState } from "react";
+import dbConnect from "../db/connection";
+import Food from "../db/models/foods";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
     const user = req.session.user;
-    const props = {};
-    if (user) {
-      props.user = req.session.user;
-      props.isLoggedIn = true;
-    } else {
-      props.isLoggedIn = false;
+
+    if (!user) {
+      return {
+        redirect: { destination: "/login", permanent: false },
+      };
     }
-    return { props };
+
+    await dbConnect();
+
+    const foods = await Food.find({ userId: user.id || user._id }).lean();
+
+    return {
+      props: {
+        user,
+        isLoggedIn: true,
+        foods: JSON.parse(JSON.stringify(foods)), // serialize dates for Next.js
+      },
+    };
   },
   sessionOptions
 );
 
-export default function SavedFoods(props) {
+export default function SavedFoods({ foods, user, isLoggedIn }) {
   const router = useRouter();
   const logout = useLogout();
-  const [savedProducts, setSavedProducts] = useState([]);
 
-  // Load saved products from localStorage
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("savedProducts")) || [];
-    setSavedProducts(saved);
-  }, []);
-
-  // Remove a product
-  const removeProduct = (code) => {
-    const filtered = savedProducts.filter((p) => p.code !== code);
-    localStorage.setItem("savedProducts", JSON.stringify(filtered));
-    setSavedProducts(filtered);
+  // Remove product (delete from DB)
+  const removeProduct = async (id) => {
+    try {
+      const res = await fetch(`/api/foods/${id}`, { method: "DELETE" });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
+      router.replace(router.asPath); // refresh page
+    } catch (err) {
+      console.error(err);
+      alert("Error removing food: " + err.message);
+    }
   };
 
   return (
@@ -50,16 +60,12 @@ export default function SavedFoods(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header
-        isLoggedIn={props.isLoggedIn}
-        username={props?.user?.username}
-        onLogout={logout}
-      />
+      <Header isLoggedIn={isLoggedIn} username={user?.username} onLogout={logout} />
 
       <main className={styles.main}>
         <h1 className={styles.title}>Saved Foods</h1>
 
-        {savedProducts.length === 0 ? (
+        {foods.length === 0 ? (
           <p>You have no saved foods yet.</p>
         ) : (
           <div
@@ -71,9 +77,9 @@ export default function SavedFoods(props) {
               marginTop: "1rem",
             }}
           >
-            {savedProducts.map((product) => (
+            {foods.map((food) => (
               <div
-                key={product.code}
+                key={food._id}
                 style={{
                   border: "1px solid #ccc",
                   borderRadius: "8px",
@@ -84,10 +90,10 @@ export default function SavedFoods(props) {
                   justifyContent: "space-between",
                 }}
               >
-                {product.image_small_url && (
+                {food.image_small_url && (
                   <img
-                    src={product.image_small_url}
-                    alt={product.product_name}
+                    src={food.image_small_url}
+                    alt={food.product_name}
                     style={{
                       width: "100%",
                       borderRadius: "4px",
@@ -96,14 +102,14 @@ export default function SavedFoods(props) {
                   />
                 )}
 
-                <h3>{product.product_name}</h3>
-                <p>Brand: {product.brands || "Unknown"}</p>
-                <p>Barcode: {product.code}</p>
-                <p>Expiration Date: {product.expirationDate}</p>
-                <p>Saved At: {new Date(product.savedAt).toLocaleString()}</p>
+                <h3>{food.product_name}</h3>
+                <p>Brand: {food.brands || "Unknown"}</p>
+                <p>Quantity: {food.quantity} {food.unit}</p>
+                <p>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</p>
+                <p>Saved At: {new Date(food.createdAt).toLocaleString()}</p>
 
                 <button
-                  onClick={() => removeProduct(product.code)}
+                  onClick={() => removeProduct(food._id)}
                   style={{
                     marginTop: "0.5rem",
                     padding: "0.5rem 1rem",
@@ -121,20 +127,6 @@ export default function SavedFoods(props) {
           </div>
         )}
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
-

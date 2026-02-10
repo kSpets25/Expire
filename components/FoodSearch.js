@@ -57,36 +57,45 @@ export default function FoodSearch() {
   };
 
   // Save product to localStorage
-  const saveProduct = (product) => {
+  const saveProduct = async (product) => {
     const expirationDate = expirationDates[product.code];
     if (!expirationDate) return alert("Please enter an expiration date");
-
-    const saved = JSON.parse(localStorage.getItem("savedProducts")) || [];
-    if (saved.some(p => p.code === product.code)) return alert("Product already saved");
-
+  
     const productToSave = {
       code: product.code || product._id || product.id,
-      name: product.product_name || "No name",
-      brand: product.brands || "Unknown",
-      image: product.image_small_url || "",
+      product_name: product.product_name || "No name",
+      brands: product.brands || "Unknown",
+      image_small_url: product.image_small_url || "",
       quantity: product.quantity || 1,
       unit: product.unit || "items",
       expirationDate,
-      savedAt: new Date().toISOString(),
     };
-
-    saved.push(productToSave);
-    localStorage.setItem("savedProducts", JSON.stringify(saved));
-
-    setExpirationDates(prev => {
-      const copy = { ...prev };
-      delete copy[product.code];
-      return copy;
-    });
-
-    alert("Product saved!");
+  
+    try {
+      const res = await fetch("/api/foods", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(productToSave),
+      });
+  
+      const data = await res.json();
+  
+      if (!data.success) throw new Error(data.message);
+  
+      // Clear expiration date input for this product
+      setExpirationDates(prev => {
+        const copy = { ...prev };
+        delete copy[product.code];
+        return copy;
+      });
+  
+      alert("Product saved!");
+    } catch (err) {
+      console.error("Error saving product:", err);
+      alert("Error saving product: " + err.message);
+    }
   };
-
+  
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
       

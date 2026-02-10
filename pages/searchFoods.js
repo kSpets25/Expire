@@ -1,4 +1,4 @@
-// pages/search-products.js
+// pages/searchFoods.js
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -10,19 +10,28 @@ import useLogout from "../hooks/useLogout";
 import FoodSearch from "../components/FoodSearch"
 
 export const getServerSideProps = withIronSessionSsr(
-  async function getServerSideProps({ req }) {
+  async ({ req }) => {
     const user = req.session.user;
-    const props = {};
-    if (user) {
-      props.user = req.session.user;
-      props.isLoggedIn = true;
-    } else {
-      props.isLoggedIn = false;
+
+    if (!user) {
+      return {
+        redirect: {
+          destination: "/login",
+          permanent: false,
+        },
+      };
     }
-    return { props };
+
+    return {
+      props: {
+        user,
+        isLoggedIn: true,
+      },
+    };
   },
   sessionOptions
 );
+
 
 export default function searchFoods(props) {
   const router = useRouter();

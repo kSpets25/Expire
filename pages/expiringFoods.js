@@ -28,24 +28,37 @@ export default function ExpiringFoods(props) {
   const router = useRouter();
   const logout = useLogout();
   const [expiringFoods, setExpiringFoods] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Get saved products from localStorage
-    const savedProducts = JSON.parse(localStorage.getItem("savedProducts")) || [];
+    if (!props.isLoggedIn) return;
 
-    const today = new Date();
-    // Filter products expiring in the next 14 days
-    const upcoming = savedProducts.filter((product) => {
-      if (!product.expirationDate) return false;
-      const expDate = new Date(product.expirationDate);
-      const diffDays = (expDate - today) / (1000 * 60 * 60 * 24);
-      return diffDays >= 0 && diffDays <= 14;
-    });
+    const fetchFoods = async () => {
+      try {
+        const res = await fetch("/api/foods");
+        const data = await res.json();
 
-    setExpiringFoods(upcoming);
-  }, []);
+        if (!data.success) throw new Error(data.message || "Failed to fetch foods");
 
-  // Calculate days left until expiration
+        const today = new Date();
+        const upcoming = data.products.filter((product) => {
+          if (!product.expirationDate) return false;
+          const expDate = new Date(product.expirationDate);
+          const diffDays = (expDate - today) / (1000 * 60 * 60 * 24);
+          return diffDays >= 0 && diffDays <= 14;
+        });
+
+        setExpiringFoods(upcoming);
+      } catch (err) {
+        console.error("Error fetching expiring foods:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFoods();
+  }, [props.isLoggedIn]);
+
   const daysLeft = (expirationDate) => {
     const today = new Date();
     const expDate = new Date(expirationDate);
@@ -71,7 +84,9 @@ export default function ExpiringFoods(props) {
       <main className={styles.main}>
         <h1 className={styles.title}>Foods Expiring Soon</h1>
 
-        {expiringFoods.length === 0 ? (
+        {loading ? (
+          <p>Loading...</p>
+        ) : expiringFoods.length === 0 ? (
           <p>No foods are expiring in the next 14 days.</p>
         ) : (
           <div
@@ -87,7 +102,7 @@ export default function ExpiringFoods(props) {
               const left = daysLeft(product.expirationDate);
               return (
                 <div
-                  key={product.code}
+                  key={product._id}
                   style={{
                     border: "1px solid #ccc",
                     borderRadius: "8px",
@@ -113,7 +128,7 @@ export default function ExpiringFoods(props) {
                   <h3>{product.product_name}</h3>
                   <p>Brand: {product.brands || "Unknown"}</p>
                   <p>Barcode: {product.code}</p>
-                  <p>Expiration Date: {product.expirationDate}</p>
+                  <p>Expiration Date: {new Date(product.expirationDate).toLocaleDateString()}</p>
                   <p>
                     Days left: <strong>{left}</strong>{" "}
                     {left === 1 ? "day" : "days"}
