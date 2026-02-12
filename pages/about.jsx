@@ -21,13 +21,13 @@ export const getServerSideProps = withIronSessionSsr(
   sessionOptions
 );
 
-export default function Home(props) {
+export default function About(props) {
   const router = useRouter();
   const logout = useLogout();
   return (
     <div className={styles.container}>
       <Head>
-        <title>Home Page</title>
+        <title>About Ua</title>
         <meta
           name="description"
           content="Search for foods and save them with expiration dates"
@@ -44,7 +44,7 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to expire! Your Food Inventory App
+          About Us Page
         </h1>
 
         {/* Landing page content */}
@@ -59,7 +59,7 @@ export default function Home(props) {
           }}
         >
           <h1>Just Eat It!!</h1>
-          <p>Search for foods and save them with expiration dates.</p>
+          <p>Information</p>
           <button
             onClick={() => {
               if (props.isLoggedIn) {
@@ -79,7 +79,7 @@ export default function Home(props) {
               marginTop: "1rem",
             }}
           >
-            Search Foods
+            Go to Search Foods
           </button>
         </div>
       </main>

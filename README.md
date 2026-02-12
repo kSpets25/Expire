@@ -9,9 +9,9 @@
 ## Application Features:
 
 * Home/Index Page - Navigation, and Introduction with Search button to start searching foods.
-* Search Products Page - Search Products by barcode number or name.
-* Saved Products Page - View all saved food products here
-* Expiring Product Page - View all foods nearing expiration (within 14 days)
+* Search Foods Page - Search Products by barcode number or name.
+* Saved Foods Page - View all saved food products here
+* Expiring Foods Page - View all foods nearing expiration (within 14 days)
 * About Page - Learn more about Expire! 
 
 ## Open Food Facts API:  This application incorporates a third-party API to power the food product searches.
