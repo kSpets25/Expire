@@ -61,6 +61,27 @@
 
 }
 
+.nutriScore {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+  }
+
+.a { background-color: #4CAF50;}
+.b { background-color: #8BC34A;}
+.c { background-color: #FFEB3B; color: #000;}
+.d { background-color: #FF9800; }
+.e { background-color: #F44336;}
+
+.default {background-color: #ccc; color: #000;}
+
+
+
 .dateInput {
     margin-bottom: 0.5;
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/savedFoods.module.css";
 import Header from "../components/header";
 import useLogout from "../hooks/useLogout";
 import dbConnect from "../db/connection";
@@ -68,37 +68,19 @@ export default function SavedFoods({ foods, user, isLoggedIn }) {
         {foods.length === 0 ? (
           <p>You have no saved foods yet.</p>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "1rem",
-              width: "100%",
-              marginTop: "1rem",
-            }}
+          <div className={styles.savedGrid}
+            
           >
             {foods.map((food) => (
-              <div
+              <div className={styles.savedCard}
                 key={food._id}
-                style={{
-                  border: "1px solid #ccc",
-                  borderRadius: "8px",
-                  padding: "1rem",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
+                
               >
                 {food.image_small_url && (
-                  <img
+                  <img className={styles.savedImmage}
                     src={food.image_small_url}
                     alt={food.product_name}
-                    style={{
-                      width: "100%",
-                      borderRadius: "4px",
-                      marginBottom: "0.5rem",
-                    }}
+                    
                   />
                 )}
 
@@ -108,17 +90,9 @@ export default function SavedFoods({ foods, user, isLoggedIn }) {
                 <p>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</p>
                 <p>Saved At: {new Date(food.createdAt).toLocaleString()}</p>
 
-                <button
+                <button className={styles.removeButton}
                   onClick={() => removeProduct(food._id)}
-                  style={{
-                    marginTop: "0.5rem",
-                    padding: "0.5rem 1rem",
-                    backgroundColor: "#F44336",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                  }}
+                  
                 >
                   Remove
                 </button>

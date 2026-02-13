@@ -134,7 +134,9 @@ export default function FoodSearch() {
             <p>Barcode: {product.code}</p>
 
             {product.nutriscore_grade && (
-              <span className={styles.nutriScore}>
+              <span className={`${styles.nutriScore} ${
+                styles[product.nutriscore_grade.toLowerCase()] || styles.default
+              }`}>
                 Nutri-Score: {product.nutriscore_grade.toUpperCase()}
               </span>
             )}
@@ -169,7 +171,6 @@ export default function FoodSearch() {
               onChange={(e) =>
                 setProducts(prev => prev.map(p => p.code === product.code ? { ...p, unit: e.target.value } : p))
               }
-              
             >
               <option value="items">Items</option>
               <option value="cases">Cases</option>
