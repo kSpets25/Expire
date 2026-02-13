@@ -1,0 +1,81 @@
+/*FoodSearch CSS*/
+
+.container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.searchSection {
+    margin-bottom: 1rem;
+}
+
+.input {
+    margin-right: 0.5rem;
+    
+}
+
+.inputTwo {
+    padding: 0.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0.2 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.image {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.5;
+
+}
+/* .smallInput*/
+
+.callendar {
+    margin-bottom: 0.5;
+    width: 180px;
+}
+.smallInput { 
+    margin-bottom: 0.5;
+    width: 80px;
+}
+
+.select {
+    margin-bottom: 0.5rem;
+    width: 120px;
+
+}
+
+.dateInput {
+    margin-bottom: 0.5;
+}
+
+.button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    opacity: 0.9;
+}

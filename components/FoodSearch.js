@@ -1,7 +1,7 @@
 // pages/SearchFoods.js
 import { useState } from "react";
 import { useRouter } from "next/router";
-
+import styles from "./FoodSearch.module.css";
 
 export default function FoodSearch() {
   const [barcode, setBarcode] = useState("");
@@ -97,49 +97,36 @@ export default function FoodSearch() {
   };
   
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
+    <div className={styles.container}>
       
 
       {/* Search inputs */}
-      <div style={{ marginBottom: "1rem" }}>
+      <div className={styles.searchSection}>
         <input
           type="text"
           placeholder="Enter barcode"
           value={barcode}
           onChange={(e) => setBarcode(e.target.value)}
-          style={{ marginRight: "0.5rem" }}
+          className={styles.input}
         />
         <input
           type="text"
           placeholder="Or enter product name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          style={{ marginRight: "0.5rem" }}
+          className={styles.inputTwo}
         />
         <button onClick={fetchProduct}>Search</button>
       </div>
 
       {/* Products grid */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-        gap: "1rem",
-      }}>
+      <div className={styles.grid}>
         {products.map((product) => (
-          <div key={product.code} style={{
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            padding: "1rem",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}>
+          <div key={product.code} className={styles.card}>
             {product.image_small_url && (
-              <img
+              <img className={styles.image}
                 src={product.image_small_url}
                 alt={product.product_name}
-                style={{ width: "100%", borderRadius: "4px", marginBottom: "0.5rem" }}
               />
             )}
             <h3>{product.product_name || "No name"}</h3>
@@ -147,33 +134,24 @@ export default function FoodSearch() {
             <p>Barcode: {product.code}</p>
 
             {product.nutriscore_grade && (
-              <span style={{
-                display: "inline-block",
-                padding: "0.3rem 0.6rem",
-                borderRadius: "4px",
-                backgroundColor: nutriScoreColor(product.nutriscore_grade),
-                color: "#fff",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
-              }}>
+              <span className={styles.nutriScore}>
                 Nutri-Score: {product.nutriscore_grade.toUpperCase()}
               </span>
             )}
 
             {/* Expiration date */}
             <label>Expiration Date:</label>
-            <input
+            <input className={styles.callendar}
               type="date"
               value={expirationDates[product.code] || ""}
               onChange={(e) =>
                 setExpirationDates({ ...expirationDates, [product.code]: e.target.value })
               }
-              style={{ marginBottom: "0.5rem" }}
             />
 
             {/* Quantity */}
             <label>Quantity:</label>
-            <input
+            <input className={styles.smallInput}
               type="number"
               min={1}
               value={product.quantity}
@@ -181,33 +159,25 @@ export default function FoodSearch() {
                 const qty = parseInt(e.target.value, 10);
                 setProducts(prev => prev.map(p => p.code === product.code ? { ...p, quantity: qty } : p));
               }}
-              style={{ marginBottom: "0.5rem", width: "80px" }}
+              
             />
 
             {/* Unit */}
             <label>Unit:</label>
-            <select
+            <select className={styles.select}
               value={product.unit}
               onChange={(e) =>
                 setProducts(prev => prev.map(p => p.code === product.code ? { ...p, unit: e.target.value } : p))
               }
-              style={{ marginBottom: "0.5rem", width: "120px" }}
+              
             >
               <option value="items">Items</option>
               <option value="cases">Cases</option>
             </select>
 
-            <button
+            <button className={styles.button}
               onClick={() => saveProduct(product)}
-              style={{
-                marginTop: "0.5rem",
-                padding: "0.5rem 1rem",
-                backgroundColor: "#0070f3",
-                color: "#fff",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }}
+              
             >
               Save
             </button>
