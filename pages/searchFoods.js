@@ -48,8 +48,9 @@ export default function searchFoods(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to searchFoods page
+          Search Foods 
         </h1>
+        <h3>Enter the Name or Barecode</h3>
         <div><FoodSearch /></div>
 
       </main>
