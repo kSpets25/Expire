@@ -122,7 +122,7 @@ export default function ExpiringFoods(props) {
                       color: left <= 3 ? "#F44336" : "#FF9800",
                     }}
                   >
-                    {left <= 0 ? "Expired!" : `${left} day${left > 1 ? "s" : ""} remaining`}
+                    ⏰  {left <= 0 ? "Expired!" : `${left} day${left > 1 ? "s" : ""} remaining`}
                   </div>
                 </div>
               );
