@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import useLogout from "../hooks/useLogout";
 import FoodSearch from "../components/FoodSearch"
 
+
 export const getServerSideProps = withIronSessionSsr(
   async ({ req }) => {
     const user = req.session.user;

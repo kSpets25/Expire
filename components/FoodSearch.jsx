@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./FoodSearch.module.css";
 
+
 export default function FoodSearch() {
-  const [barcode, setBarcode] = useState("");
-  const [name, setName] = useState("");
+  const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [expirationDates, setExpirationDates] = useState({});
   const router = useRouter();
@@ -29,32 +29,50 @@ export default function FoodSearch() {
 
   // Fetch products from Open Food Facts
   const fetchProduct = async () => {
-    if (!barcode && !name) return alert("Enter barcode or product name");
-
+    if (!query.trim()) return alert("Enter barcode or product name");
+  
     try {
-      if (barcode) {
-        const res = await fetch(
-          `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
+      const isBarcode = /^\d+$/.test(query.trim());
+  
+      let res;
+  
+      if (isBarcode) {
+        // Barcode search
+        res = await fetch(
+          `https://world.openfoodfacts.org/api/v0/product/${query}.json`
         );
+  
         const data = await res.json();
+  
         if (data.status === 1) {
           setProducts([{ ...data.product, quantity: 1, unit: "items" }]);
         } else {
           alert("Product not found");
           setProducts([]);
         }
-      } else if (name) {
-        const res = await fetch(
-          `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(name)}&search_simple=1&json=1`
+  
+      } else {
+        // Name search
+        res = await fetch(
+          `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&json=1`
         );
+  
         const data = await res.json();
+  
         if (data.products && data.products.length > 0) {
-          setProducts(data.products.map(p => ({ ...p, quantity: 1, unit: "items" })));
+          setProducts(
+            data.products.map(p => ({
+              ...p,
+              quantity: 1,
+              unit: "items"
+            }))
+          );
         } else {
           alert("No products found");
           setProducts([]);
         }
       }
+  
     } catch (err) {
       console.error("Error fetching product:", err);
       alert("Error fetching product from Open Food Facts");
@@ -111,20 +129,14 @@ export default function FoodSearch() {
 
       {/* Search inputs */}
       <div className={styles.searchSection}>
-        <input
-          type="text"
-          placeholder="Enter barcode"
-          value={barcode}
-          onChange={(e) => setBarcode(e.target.value)}
-          className={styles.input}
-        />
-        <input
-          type="text"
-          placeholder="Or enter product name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className={styles.inputTwo}
-        />
+      <input
+        type="text"
+        placeholder="Enter barcode or product name"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && fetchProduct()}
+        className={styles.input}
+      />
         <button onClick={fetchProduct}>Search</button>
       </div>
 
