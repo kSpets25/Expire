@@ -1,6 +1,5 @@
 // pages/savedFoods.js
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
@@ -80,7 +79,7 @@ export default function SavedFoods({ foods, user, isLoggedIn }) {
                 {food.image_small_url && (
                   <img className={styles.savedImmage}
                     src={food.image_small_url}
-                    alt={food.product_name}
+                    alt={food.product_name || "Product image" }
                     
                   />
                 )}

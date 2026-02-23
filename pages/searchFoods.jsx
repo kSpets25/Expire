@@ -1,6 +1,5 @@
 // pages/searchFoods.js
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
@@ -34,7 +33,7 @@ export const getServerSideProps = withIronSessionSsr(
 );
 
 
-export default function searchFoods(props) {
+export default function SearchFoods(props) {
   const router = useRouter();
   const logout = useLogout();
   return (

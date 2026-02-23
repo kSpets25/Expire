@@ -45,7 +45,7 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to expire! Your Food Inventory App
+          Welcome to expire! Your Food Expiration Tracker
         </h1>
 
         {/* Landing page content */}

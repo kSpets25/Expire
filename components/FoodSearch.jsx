@@ -10,6 +10,11 @@ export default function FoodSearch() {
   const [expirationDates, setExpirationDates] = useState({});
   const router = useRouter();
 
+  const today = new Date();
+  const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+              .toISOString()
+              .split("T")[0];
+
   // Nutri-Score color helper
   const nutriScoreColor = (grade) => {
     switch (grade?.toLowerCase()) {
@@ -58,9 +63,12 @@ export default function FoodSearch() {
 
   // Save product to localStorage
   const saveProduct = async (product) => {
+    
     const expirationDate = expirationDates[product.code];
     if (!expirationDate) return alert("Please enter an expiration date");
-  
+    
+    
+
     const productToSave = {
       code: product.code || product._id || product.id,
       product_name: product.product_name || "No name",
@@ -94,6 +102,7 @@ export default function FoodSearch() {
       console.error("Error saving food:", err);
       alert("Error saving food to inventory: " + err.message);
     }
+    
   };
   
   return (
@@ -126,7 +135,7 @@ export default function FoodSearch() {
             {product.image_small_url && (
               <img className={styles.image}
                 src={product.image_small_url}
-                alt={product.product_name}
+                alt={product.product_name || "Product image"}
               />
             )}
             <h3>{product.product_name || "No name"}</h3>
@@ -143,12 +152,14 @@ export default function FoodSearch() {
 
             {/* Expiration date */}
             <label>Expiration Date:</label>
+            
             <input className={styles.callendar}
               type="date"
+              min={localToday}
               value={expirationDates[product.code] || ""}
-              onChange={(e) =>
-                setExpirationDates({ ...expirationDates, [product.code]: e.target.value })
-              }
+              onChange={(e) => {
+                setExpirationDates({ ...expirationDates, [product.code]: e.target.value });
+              }}
             />
 
             {/* Quantity */}

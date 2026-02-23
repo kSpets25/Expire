@@ -1,6 +1,5 @@
 // pages/expiringFoods.js
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
@@ -46,7 +45,7 @@ export default function ExpiringFoods(props) {
           if (!product.expirationDate) return false;
           const expDate = new Date(product.expirationDate);
           const diffDays = (expDate - today) / (1000 * 60 * 60 * 24);
-          return diffDays >= 0 && diffDays <= 14;
+          return diffDays <= 14;
         });
 
         setExpiringFoods(upcoming);
