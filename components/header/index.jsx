@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import Link from "next/link";
 import useLogout from "../../hooks/useLogout";
+import Image from "next/image";
 
 export default function Header(props) {
   const logout = useLogout();
@@ -9,7 +10,10 @@ export default function Header(props) {
       {props.isLoggedIn ? (
         <>
           <p className={styles.navigation}> 
-          <Link href="/">Home</Link>
+          <Link href="/"><Image src="/images/logo-2white-02.png" 
+            alt="Home" width={170} height={45} className={styles.homeImg}/>
+            </Link>
+          
           <Link href="/about">About</Link>
           <Link href="/searchFoods">Search</Link>
           <Link href="/savedFoods">Saved</Link>
