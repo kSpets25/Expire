@@ -115,10 +115,10 @@ export default function FoodSearch() {
         return copy;
       });
   
-      alert("Food saved to inventory!");
+      alert("Food item saved!");
     } catch (err) {
       console.error("Error saving food:", err);
-      alert("Error saving food to inventory: " + err.message);
+      alert("Error saving food item: " + err.message);
     }
     
   };
