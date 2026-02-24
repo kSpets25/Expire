@@ -86,6 +86,7 @@ export default function SavedFoods({ foods, user, isLoggedIn }) {
 
                 <h3>{food.product_name}</h3>
                 <p>Brand: {food.brands || "Unknown"}</p>
+                <p>Barcode: {food.code}</p>
                 <p>Quantity: {food.quantity} {food.unit}</p>
                 <p>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</p>
                 <p>Saved At: {new Date(food.createdAt).toLocaleString()}</p>
