@@ -123,6 +123,17 @@ export default function ExpiringFoods(props) {
                   >
                     ⏰  {left <= 0 ? "Expired!" : `${left} day${left > 1 ? "s" : ""} remaining`}
                   </div>
+                  <button
+                  className={styles.viewButton}
+                  onClick={() =>
+                    router.push({
+                      pathname: "/savedFoods",
+                      query: { highlight: product._id }, // just the id
+                    })
+                  }
+                >
+                  View Item In Saved Foods
+                </button>
                 </div>
               );
             })}

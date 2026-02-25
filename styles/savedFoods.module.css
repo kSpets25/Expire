@@ -38,3 +38,8 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+.savedCard.highlight {
+    background-color: #ffff99; /* bright yellow */
+    transition: background-color 0.5s ease;
+  }
