@@ -62,7 +62,7 @@ export default function Login(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to expire! Please Login!
+          Login or Create an Account!
         </h1>
 
         <p className={styles.description}>
