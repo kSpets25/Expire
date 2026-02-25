@@ -53,16 +53,20 @@ export default function About(props) {
           <p>Search, Save, and Track Expiring Foods
           <br></br>
           <br></br>
-          expire! is a food expiration tracker!  It is a simple, friendly and helpful application designed specifically for food pantries to track expiring foods and help reduce food waste, ultimately saving time and money.  With expire! pantry coordinators, staff, and volunteers can quickly search for products, save those food items to inventory, and view items expiring within the next 14 days. 
+          expire! is a food expiration tracker! It's a simple, friendly and helpful platform designed specifically to assist food pantries track expiring foods and to reduce food waste, ultimately saving time and money.  With expire! pantry coordinators, staff, and volunteers can quickly search for specific foods, save those food items, and track those items expiring within the next 14 days. 
           <br></br>
           <br></br>
-          The expire application is designed to be straightforward and extremely easy to use. Just search by  entering a food item barcode or name, and a list of food options will appear.  Select an item and choose  an expiration date and the number of items or cases, and save the item to the saved foods page. The application will automatically keep track of all the foods expiring within the next 14 days. Each food item on the expiring page displays a days left count down notification and is color coded with orange or red, indicating the urgency of use before expiring. In the event of a missed expiration date, the word Expired will appear at the bottom of the food item on the expiring foods page. Delete a food item on the list at any time.
+          The expire application is designed to be straightforward, intuitive and user-friendly. Users can quickly search for a food item by entering it's barcode or name, and a list of food items will appear.  After selecting an item, users simply input the expiration date and quantity (individual items or cases) and save it to the Saved Foods page.
+          <br></br>
+          <br></br> 
+          The application automatically monitors all saved items and tracks those expiring within the next 14 days. Items approaching their expiration date are displayed on the Expiring Foods page, where each entry includes a countdown of the remaining days. To enhance visibility and notification, items are color-coded orange for approaching expiration and red for urgent use. If an item passes it's expiration date, it is clearly labeled "Expired" on the the Expiring Foods page. Users also have the option to delete items from the list at any time, ensuring accurate and up-to-date food management. 
           <br></br>
           <br></br>
           Using this application on a daily basis provides coordinators with an organized system to track the expiration dates to see what needs attention and plan accordingly. This gives food pantry coordinators and staff the ability to quickly check expiring foods, which increases intentional distribution of the foods before expiration, and not only prevents food waste but saves money.
           <br></br>
           <br></br>
-          expire! makes this process easier, faster, more engaging, and even more fun!
+          Don't let food expire! "Eat It While It's Fresh!" Make it easier, faster, and even more fun!
+          
 
 
         </p>

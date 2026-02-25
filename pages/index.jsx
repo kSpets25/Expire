@@ -72,7 +72,7 @@ export default function Home(props) {
             }}
             style={{
               padding: "1rem 2rem",
-              backgroundColor: "#0070f3",
+              backgroundColor: "#018c45",
               color: "#fff",
               border: "none",
               borderRadius: "8px",
