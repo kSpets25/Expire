@@ -100,3 +100,22 @@
 .button:hover {
     opacity: 0.9;
 }
+
+.movingImage {
+  position: fixed;
+  width: 120;
+  height: 45;
+  top: 95px;
+  left: -200px;
+  width: 150px;
+  animation: moveAcross 10s linear infinite;
+}
+
+@keyframes moveAcross {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 100vw;
+  }
+}

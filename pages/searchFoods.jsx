@@ -51,7 +51,7 @@ export default function SearchFoods(props) {
         <h1 className={styles.title}>
           Search Foods 
         </h1>
-        <h3>Enter the Name or Barecode</h3>
+        <h3>Enter the Name or Barcode</h3>
         <div><FoodSearch /></div>
 
       </main>

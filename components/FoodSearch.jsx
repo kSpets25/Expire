@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./FoodSearch.module.css";
-
+import Image from "next/image";
 
 export default function FoodSearch() {
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [expirationDates, setExpirationDates] = useState({});
   const router = useRouter();
-
+  const [loading, seetLoading] = useState(false);
   const today = new Date();
   const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
               .toISOString()
@@ -30,7 +30,7 @@ export default function FoodSearch() {
   // Fetch products from Open Food Facts
   const fetchProduct = async () => {
     if (!query.trim()) return alert("Enter barcode or product name");
-  
+    seetLoading(true); //start aninimation
     try {
       const isBarcode = /^\d+$/.test(query.trim());
   
@@ -80,6 +80,7 @@ export default function FoodSearch() {
       console.error("Error fetching product:", err);
       alert("Error fetching product from Open Food Facts");
     }
+    seetLoading(false); //stop animation
   };
 
   // Save product to localStorage
@@ -141,6 +142,13 @@ export default function FoodSearch() {
         className={styles.input}
       />
         <button onClick={fetchProduct}>Search</button>
+        {loading && (
+          <img src="/images/foodBus1-01.png"
+          alt="Loading..." 
+          className={styles.movingImage}
+          />
+          
+        )}
       </div>
 
       {/* Products grid */}
