@@ -69,7 +69,7 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
   
         setTimeout(() => {
           element.classList.remove(styles.highlight);
-        }, 20000);
+        }, 10000);
       }, 100); // small delay ensures DOM is ready
     }
   }, [highlightId, foods]);

@@ -65,7 +65,7 @@ export default function About(props) {
           Using this application on a daily basis provides coordinators with an organized system to track the expiration dates to see what needs attention and plan accordingly. This gives food pantry coordinators and staff the ability to quickly check expiring foods, which increases intentional distribution of the foods before expiration, and not only prevents food waste but saves money.
           <br></br>
           <br></br>
-          Don't let food expire! "Eat It While It's Fresh!" Make it easier, faster, and even more fun!
+          Don't let food expire! "Eat It While It's Fresh!" expire! makes it easier, faster, and even more fun!
           
 
 
