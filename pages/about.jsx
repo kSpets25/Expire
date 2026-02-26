@@ -53,7 +53,7 @@ export default function About(props) {
           <p>Search, Save, and Track Expiring Foods
           <br></br>
           <br></br>
-          expire! is a food expiration tracker! It's a simple, friendly and helpful platform designed specifically for food pantry coordinators to track expiring foods and to reduce food waste, ultimately saving time and money. Even though this application was inspired and designed with food pantries in mind, with expire!, anyone can quickly search for specific foods, save those food items, and track all items expiring within the next 14 days. 
+          expire! is a food expiration tracker! It's a simple, friendly and helpful platform designed specifically for food pantry coordinators to track expiring foods and to reduce food waste, ultimately saving time and money. Even though this application was inspired and designed with food pantries in mind, with expire!, any business with the need to search for specific foods, save those food items, and track all items expiring within the next 14 days could clearly benefit from this application. 
           <br></br>
           <br></br>
           The "expire!" application is designed to be straightforward, intuitive and user-friendly. Food pantry coordinators and staff can quickly search for a food item by entering it's barcode or name, and a list of food products will appear.  After selecting an item, users simply input the expiration date and quantity (individual items or cases) and save it to the Saved Foods page.
