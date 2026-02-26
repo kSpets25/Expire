@@ -40,9 +40,7 @@ export default function FoodSearch() {
         // Barcode search
         res = await fetch(
           `https://world.openfoodfacts.org/api/v0/product/${query}.json`,{
-          headers: {
-            'User-Agent': 'expire/1.0 (expirek2@gmail.com)', //custom user-agent
-          },
+          
       });
   
         const data = await res.json();
