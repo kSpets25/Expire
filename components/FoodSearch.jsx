@@ -133,6 +133,7 @@ export default function FoodSearch() {
 
       {/* Search inputs */}
       <div className={styles.searchSection}>
+       
       <input
         type="text"
         placeholder="Enter barcode or product name"
@@ -141,7 +142,8 @@ export default function FoodSearch() {
         onKeyDown={(e) => e.key === "Enter" && fetchProduct()}
         className={styles.input}
       />
-        <button onClick={fetchProduct}>Search</button>
+        
+        <button className={styles.button} onClick={fetchProduct}>Search</button>
         {loading && (
           <img src="/images/foodBus1-01.png"
           alt="Loading..." 
@@ -149,6 +151,7 @@ export default function FoodSearch() {
           />
           
         )}
+      
       </div>
 
       {/* Products grid */}

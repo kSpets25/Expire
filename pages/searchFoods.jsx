@@ -48,6 +48,9 @@ export default function SearchFoods(props) {
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
 
       <main className={styles.main}>
+        <>
+        <h1>logo image here</h1>
+        </>
         <h1 className={styles.title}>
           Search Foods 
         </h1>
