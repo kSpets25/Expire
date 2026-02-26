@@ -1,5 +1,18 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0rem;
+}
+.mainHome {
+  justify-items: center;
+  background-color: rgb(216, 216, 226);
+  content: '';
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-image: url('/images/soup2.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1
 }
 
 .main {
@@ -10,6 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .footer {

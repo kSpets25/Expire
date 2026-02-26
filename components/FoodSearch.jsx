@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./FoodSearch.module.css";
-import Image from "next/image";
+
 
 export default function FoodSearch() {
   const [query, setQuery] = useState("");

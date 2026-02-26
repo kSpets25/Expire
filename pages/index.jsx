@@ -43,7 +43,7 @@ export default function Home(props) {
         onLogout={logout}
       />
 
-      <main className={styles.main}>
+      <main className={styles.mainHome}>
         <h1 className={styles.title}>
           Welcome to expire! 
           <br></br>Your Food Expiration Tracker

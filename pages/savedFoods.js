@@ -115,10 +115,14 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
                       <p>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</p>
                       <p>Saved At: {new Date(food.createdAt).toLocaleString()}</p>
 
-                      <button className={styles.removeButton}
-                        onClick={() => {removeProduct(food._id);
-                        alert("Food item removed");
-                        }} 
+                      <button
+                        className={styles.removeButton}
+                        onClick={() => {
+                          const confirmed = window.confirm("Are you sure you want to remove this food item?");
+                          if (confirmed) {
+                            removeProduct(food._id);
+                          }
+                        }}
                       >
                         Remove
                       </button>
