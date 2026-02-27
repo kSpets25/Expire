@@ -30,19 +30,16 @@ export default function FoodSearch() {
   // Fetch products from Open Food Facts
   const fetchProduct = async () => {
     if (!query.trim()) return alert("Enter barcode or product name");
-    seetLoading(true); //start aninimation
+  
+    seetLoading(true);
+  
     try {
       const isBarcode = /^\d+$/.test(query.trim());
-  
       let res;
   
       if (isBarcode) {
-        // Barcode search
-        res = await fetch(
-          `https://world.openfoodfacts.org/api/v0/product/${query}.json`,{
-          
-      });
-  
+        // API route (not Open Food Facts directly)
+        res = await fetch(`/api/barcode?code=${query}`);
         const data = await res.json();
   
         if (data.status === 1) {
@@ -53,11 +50,8 @@ export default function FoodSearch() {
         }
   
       } else {
-        // Name search
-        res = await fetch(
-          `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&json=1`
-        );
-  
+        // API route
+        res = await fetch(`/api/search?query=${query}`);
         const data = await res.json();
   
         if (data.products && data.products.length > 0) {
@@ -76,9 +70,10 @@ export default function FoodSearch() {
   
     } catch (err) {
       console.error("Error fetching product:", err);
-      alert("Error fetching product from Open Food Facts");
+      alert("Error fetching product");
     }
-    seetLoading(false); //stop animation
+  
+    seetLoading(false);
   };
 
   // Save product to localStorage
