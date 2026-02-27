@@ -93,7 +93,7 @@ export default function Login(props) {
             id="password"
             onChange={handleChange}
             value={password}
-            autocomplete="current-password"
+            autoComplete="current-password"
           />
           <button>Login</button>
           {error && <p>{error}</p>}
