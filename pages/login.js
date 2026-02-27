@@ -85,6 +85,7 @@ export default function Login(props) {
             id="username"
             onChange={handleChange}
             value={username}
+            autoComplete="username"
           />
           <label htmlFor="password">Password: </label>
           <input
