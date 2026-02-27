@@ -82,8 +82,6 @@ export default function FoodSearch() {
     const expirationDate = expirationDates[product.code];
     if (!expirationDate) return alert("Please enter an expiration date");
     
-    
-
     const productToSave = {
       code: product.code || product._id || product.id,
       product_name: product.product_name || "No name",
