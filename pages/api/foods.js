@@ -43,7 +43,7 @@ async function handler(req, res) {
       console.error("POST foods error:", err);
 
       if (err.code === 11000) {
-        return res.status(409).json({ success: false, message: "Food already saved" });
+        return res.status(409).json({ success: false, message: "" });
       }
 
       return res.status(400).json({ success: false, message: err.message });
