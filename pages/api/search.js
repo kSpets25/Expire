@@ -8,7 +8,6 @@ export default async function handler(req, res) {
 
     const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&json=1&page_size=10&fields=code,product_name,brands,image_small_url,nutriscore_grade`;
 
-    console.log("Fetching:", url);
 
     const response = await fetch(url);
 
