@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     response = await fetch(
       `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(
         query
-      )}&search_simple=1&action=process&json=1&page_size=10&fields=code,product_name,brands,image_small_url,nutriscore_grade`
+      )}&search_simple=1&action=process&json=1&page_size=30&fields=code,product_name,brands,image_small_url,nutriscore_grade`
     );
 
     if (!response.ok) {
