@@ -81,6 +81,14 @@ export default function FoodSearch() {
     
     const expirationDate = expirationDates[product.code];
     if (!expirationDate) return alert("Please enter an expiration date");
+
+    const saved = JSON.parse(localStorage.getItem("savedProducts")) || [];
+  
+    const exists = saved.some((p) => p.code === product.code);
+    if (exists) {
+      alert("Product already saved");
+      return;
+    }    
     
     const productToSave = {
       code: product.code || product._id || product.id,
