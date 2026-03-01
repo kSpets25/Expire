@@ -9,9 +9,9 @@ export default async function handler(req, res) {
     const isBarcode = /^\d{8,14}$/.test(query);
     let response;
 
-    // ------------------------
+    
     // BARCODE SEARCH
-    // ------------------------
+    
     if (isBarcode) {
       response = await fetch(
         `https://world.openfoodfacts.net/api/v2/product/${query}.json`
@@ -34,14 +34,15 @@ export default async function handler(req, res) {
       });
     }
 
-    // ------------------------
+    
     // NAME SEARCH
-    // ------------------------
+    
     response = await fetch(
       `https://world.openfoodfacts.net/cgi/search.pl?search_terms=${encodeURIComponent(
         query
-      )}&search_simple=1&action=process&json=1&page_size=30&fields=code,product_name,brands,image_small_url,nutriscore_grade`
-    );
+      )}&search_simple=1&action=process&json=1&page_size=20&fields=code,product_name,brands,image_small_url,nutriscore_grade`
+     
+      );
 
     if (!response.ok) {
       const text = await response.text();
