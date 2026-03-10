@@ -1,6 +1,24 @@
 
 .container {
-    padding: 0 2rem;
+    padding: 0rem;
+  }
+  
+
+  .mainAbout{
+    justify-items: left;
+    
+    background-color: white;
+    width: 100%;
+    display:block;
+    text-align: center;
+   
+    padding: 3rem;
+    
+  }
+
+  .mainAbout p {
+    text-align: left;
+    width:80%
   }
 
 .button {

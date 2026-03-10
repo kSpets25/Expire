@@ -144,7 +144,7 @@ export default function FoodSearch() {
         
         <button className={styles.button} onClick={fetchProduct}>Search</button>
         {loading && (
-          <img src="/images/foodBus1-01.png"
+          <img src="/images/foodBus1-2.png"
           alt="Loading..." 
           className={styles.movingImage}
           />

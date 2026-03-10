@@ -50,19 +50,12 @@ export default function Home(props) {
         </h1>
 
         {/* Landing page content */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "60vh",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          <h1>Eat it While it's Fresh!!</h1>
+        <div className= {styles.homeContent}
+        
+          >
+          <h2>Eat it While it's Fresh!!</h2>
           <p>Search for foods and save them with expiration dates.</p>
-          <button
+          <button className ={styles.buttonSearch}
             onClick={() => {
               if (props.isLoggedIn) {
                 router.push("/searchFoods");
@@ -70,16 +63,7 @@ export default function Home(props) {
                 router.push("/login");
               }
             }}
-            style={{
-              padding: "1rem 2rem",
-              backgroundColor: "#018c45",
-              color: "#fff",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-              fontSize: "1rem",
-              marginTop: "1rem",
-            }}
+            
           >
             Search Foods
           </button>

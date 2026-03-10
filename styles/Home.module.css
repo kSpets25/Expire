@@ -1,6 +1,12 @@
 .container {
   padding: 0 0rem;
 }
+
+.h1 {
+  font-size: 35rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 0;
+}
 .mainHome {
   justify-items: center;
   background-color: rgb(216, 216, 226);
@@ -9,13 +15,14 @@
   left: 0;
   width: 100%;
   height: 60%;
-  background-image: url('/images/soup2.jpg');
+  background-image: url('/images/soup4.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1
 }
 
 .main {
+  background-color: white;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -24,6 +31,28 @@
   justify-content: center;
   align-items: center;
   
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  height: 60vh;
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  
+}
+
+.buttonSearch {
+  padding: 1rem 2rem;
+  background-color: #018c45;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .footer {
@@ -56,7 +85,11 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding-top: 1rem;
+  
 }
 
 .title,
