@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+.mainSaved {
+    background-color: rgb(216, 216, 226);
+}
+
 .savedGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));

@@ -44,10 +44,12 @@ export default function Home(props) {
       />
 
       <main className={styles.mainHome}>
+        <div className={styles.titleBackground}>
         <h1 className={styles.title}>
           Welcome to expire! 
           <br></br>Your Food Expiration Tracker
         </h1>
+       </div>
 
         {/* Landing page content */}
         <div className= {styles.homeContent}

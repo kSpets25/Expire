@@ -3,6 +3,10 @@
     font-family: Arial, sans-serif;
 }
 
+.mainExpiring {
+    background-color: rgb(216, 216, 226);
+}
+
 .expiringGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));

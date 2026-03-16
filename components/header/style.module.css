@@ -7,7 +7,7 @@
   justify-content: space-between;
   gap: 40px;
   color: rgb(233, 231, 237);
-  background-color: #0f325a;
+  background-color: #035273;
   align-items: center;
 }
 
@@ -20,7 +20,7 @@
   justify-content: space-between;
   gap: 40px;
   color: rgb(233, 231, 237);
-  background-color: #0f325a;
+  background-color: #035273;
   align-items: center;
 }
 
@@ -53,6 +53,7 @@
   
  }
  .container1 {
+  display: flex;
   padding-left: 3px;
   padding-top: 0px;
   padding-right: 1px;

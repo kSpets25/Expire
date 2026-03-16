@@ -3,12 +3,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/searchFoods.module.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import useLogout from "../hooks/useLogout";
 import FoodSearch from "../components/FoodSearch"
-
+import Image from "next/image";
 
 export const getServerSideProps = withIronSessionSsr(
   async ({ req }) => {
@@ -47,13 +47,14 @@ export default function SearchFoods(props) {
 
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
 
-      <main className={styles.main}>
-        <>
-        <h1>logo image here</h1>
-        </>
-        <h1 className={styles.title}>
-          Search Foods 
-        </h1>
+      <main className={styles.mainSearch}>
+      <div className={styles.logoHead}>
+        <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
+          <h1 className={styles.title}>
+            Search Foods 
+          </h1>
+       </div> 
+       
         <h3>Enter the Name or Barcode</h3>
         <div><FoodSearch /></div>
 

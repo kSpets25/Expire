@@ -1,9 +1,11 @@
-/*FoodSearch CSS*/
+/*FoodSearch and results CSS*/
 
 .container {
     padding: 2rem;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+   
 }
+
 
 .searchSection {
    
@@ -16,6 +18,7 @@
     padding-right: 10px;
 
 }
+
 
 .input {
     width: 13rem;

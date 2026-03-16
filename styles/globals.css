@@ -6,6 +6,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h5 {
+  font-size: 14px;
+  color:aliceblue;
+}
+
+
 .mainHome {
   content: '';
   /*position: relative;*/
