@@ -1,12 +1,13 @@
 /*savedFoods css*/
 
 .container {
-    padding: 2rem;
+    padding: 1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .mainSaved {
-    background-color: rgb(216, 216, 226);
+    background-color: rgb(225, 225, 234);
+    
 }
 
 .savedGrid {
@@ -18,7 +19,8 @@
   }
 
 .savedCard {
-    border: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid #697091;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
