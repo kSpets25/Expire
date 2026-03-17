@@ -1,11 +1,9 @@
 
 .container {
   display: flex;
-  padding-top:  0px;
-  padding-left: 70px;
-  padding-right: 40px;
+  padding: 10px 40px;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   color: rgb(233, 231, 237);
   background-color: #035273;
   align-items: center;
@@ -29,9 +27,10 @@
 }
 
 .navigation {
-  display: flex; 
-  align-items:center;
-  gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .homeImg {
@@ -43,53 +42,55 @@
   transform: scale(1.1);
   opacity: 0.8;
 }
+.menuButton {
+  display:none;
+}
 
-.hamburger {
-  display: none; /* desktop hidden */
-  font-size: 45px;
-  cursor: pointer;
-  color: white;
-  z-index: 10;
+.open {    
+  display: flex;
 }
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
- .container {
-  display: flex;
-  width: 200%;
-  padding-left: 20px;
-  gap: 2px;
-  
-  
- }
- .container1 {
-  display: flex;
-  padding-left: 1px;
-  padding-top: 0px;
-  padding-right: 1px;
-  gap: 2px;
- }
  
- .navigation {display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  background-color: #035273;
-  width: 100%;
-  padding: 20px;
+    .container {
+      display:flex;
+      width:200%;
+      padding: 10px 20px;
+      flex-direction: row;
+      gap: 20px;
+    }
+    
+    .container1 {
+      padding: 5px 0;
+     display: flex;
+     width:150%;
+      gap: 15px;
+      font-size: 16px;
+    }
+    .menuButton {
+      display: block;
+    }
   
- 
+    .navigation {
+      display: none;
+      flex-direction: column;
+      gap: 18px;
+      background-color: #035273;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+    }
   
- }
- .navigation.active {
-  display: flex;
- 
- }
+    .navigation.open {
+      display: flex;
+    }
+  
+    .container p {
+      font-size: 16px;
+    }
 
- .hamburger {
-  display:flex;
 
-
- }
- 
-}
+  
+  }
