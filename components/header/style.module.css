@@ -53,22 +53,25 @@
 @media screen and (min-width: 320px) and (max-width: 760px) {
  
     .container {
+      
       display:flex;
-      width:100%;
+      width:200%;
       padding: 10px 20px;
       flex-direction: row;
       gap: 20px;
     }
     
     .container1 {
+      font-size: 30px;
       padding: 5px 0;
-     display: flex;
-     width:150%;
+      display: flex;
       gap: 15px;
-      font-size: 16px;
+      
     }
     .menuButton {
       display: block;
+      font-size: 30px;
+      
     }
   
     .navigation {
@@ -87,10 +90,5 @@
       display: flex;
     }
   
-    .container p {
-      font-size: 16px;
-    }
-
-
   
   }
