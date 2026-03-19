@@ -6,19 +6,20 @@
 }
 
 .mainSaved {
-    background-color: rgb(225, 225, 234);
+    background-color: white;
     
 }
 
 .savedGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px, 0.5fr));
     gap: 1rem;
     width: 100%;
     margin-top: 1rem;
   }
 
 .savedCard {
+    background-color:rgb(225, 225, 234);
     width: 100%;
     border: 1px solid #697091;
     border-radius: 8px;

@@ -8,7 +8,6 @@
 
 
 .searchSection {
-   
     margin-bottom: 1rem;
     border-radius: 6px;
     background-color: white;
@@ -36,10 +35,12 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    width: 100%;
     gap: 1rem;
 }
 
 .card {
+    background-color: rgb(225, 225, 234);
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
@@ -51,6 +52,7 @@
 }
 
 .image {
+    height: 60vh;
     display: inline-block;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
@@ -128,6 +130,7 @@
   animation: moveAcross 10s linear infinite;
 }
 
+
 @keyframes moveAcross {
   from {
     left: -200px;
@@ -136,3 +139,20 @@
     left: 100vw;
   }
 }
+
+@media (max-width: 960px){
+    .searchSection {
+        width: 100%;
+        background-color: #8BC34A;
+        display: block;
+        padding-top: 2px;
+    }
+    .button {
+        width: 5rem;
+    }
+    .input {
+        width: 10rem;
+    }
+}
+    
+

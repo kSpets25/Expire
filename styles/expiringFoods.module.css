@@ -4,18 +4,19 @@
 }
 
 .mainExpiring {
-    background-color: rgb(216, 216, 226);
+    background-color: white;
 }
 
 .expiringGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px, 0.5fr));
     gap: 1rem;
     width: 100%;
     margin-top: 1rem;
   }
 
   .expiringCard {
+    background-color: rgb(225, 225, 234);
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
