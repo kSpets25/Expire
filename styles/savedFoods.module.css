@@ -79,4 +79,8 @@
     transition: background-color 0.5s ease;
   }
 
-  @media (max-width: 960px)
+  @media (max-width: 960px){
+    .mainSaved {
+      width: 200%;
+    }
+  }

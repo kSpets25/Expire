@@ -1,6 +1,8 @@
 .container {
+  width: 100%;
     padding: 0 0rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 .mainExpiring {
@@ -50,6 +52,10 @@
     margin-bottom: 0.5rem;
 }
 
-
+@media (max-width: 960px){
+  .mainExpiring {
+    width: 200%;
+  }
+}
 
 
