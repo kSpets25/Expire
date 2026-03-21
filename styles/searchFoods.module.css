@@ -1,8 +1,8 @@
 
 .container {
-  display:block;
+    display:block;
     padding: 0 0rem;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 
   }
 
@@ -178,27 +178,31 @@
   @media screen and (min-width: 320px) and (max-width: 920px){
     
     .logoHead {
-      display:block; 
+      display:block;
+      justify-content: center;
+      align-items: center;
+      
     }
     .grid {
       width: 100%;
       flex-direction: column;
     }
     .title {
-      font-size: 35px;
+      font-size: 50px;
       padding: 0px;
       
     }
     .logo2 {
-      width: 130px;
-      margin-left: 50px;;
+      width: 180px;
+      margin-left: 60px;;
+      padding-left: 30px;
       
     }
     
     .mainSearch {
       width: 200%;
       background-color: white;
-      
+     
     }
   }
   
