@@ -6,6 +6,17 @@
     
     
   }
+
+  .mainSearch {
+    width:100%;
+    justify-items: center;
+    background-color: white;
+    top: 0px;
+    left: 0;
+    height: 80vh;
+   
+    
+  }
   .logoHead {
     display: flex;
     padding-top: 50px;
@@ -22,17 +33,6 @@
   .h1 {
     font-size: 35rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
-  }
-  
-  .mainSearch {
-    width:100%;
-    justify-items: center;
-    background-color: white;
-    top: 0px;
-    left: 0;
-    height: 80vh;
-   
     
   }
   
@@ -92,7 +92,7 @@
     font-size: 3.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    padding-top: 1.5rem;
+    padding-top: 2.2rem;
     padding-left: 20px;
    
     

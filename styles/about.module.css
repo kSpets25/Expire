@@ -3,17 +3,30 @@
     padding: 0rem;
   }
   
-
   .mainAbout{
-    justify-items: left;
-    
+    justify-items: center;
     background-color: white;
     width: 100%;
     display:block;
     text-align: center;
-   
     padding: 3rem;
     
+  }
+
+  .logoHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+  }
+
+  .logo2 {display: flex;
+    width:100px;
+    padding-top:  20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+   
   }
 
   .mainAbout p {

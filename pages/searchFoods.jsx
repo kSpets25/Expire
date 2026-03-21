@@ -5,7 +5,6 @@ import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import styles from "../styles/searchFoods.module.css";
 import Header from "../components/header";
-import Footer from "../components/footer";
 import useLogout from "../hooks/useLogout";
 import FoodSearch from "../components/FoodSearch"
 import Image from "next/image";
@@ -60,7 +59,7 @@ export default function SearchFoods(props) {
 
       </main>
 
-      <Footer className={styles.footer}/>
+      
     </div>
   );
 }

@@ -83,9 +83,12 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
       </Head>
 
       <Header isLoggedIn={isLoggedIn} username={user?.username} onLogout={logout} />
-      <h1 className={styles.title}>Saved Foods</h1>
+      
       <main className={styles.mainSaved}>
-        
+        <div className={styles.logoHead}>
+        <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
+        <h2>Saved Foods</h2>
+        </div>
         {foods.length === 0 ? (
           <p>You have no saved foods yet.</p>
         ) : (

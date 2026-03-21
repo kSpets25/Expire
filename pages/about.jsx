@@ -44,11 +44,16 @@ export default function About(props) {
       />
 
       <main className={styles.mainAbout}>
-        
-              <h1 className={styles.title}>
+              <div className={styles.logoHead}>
+              <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
+              <h2>
                 About Expire!
-              </h1>
-                <h2>Just Eat It!!</h2>
+              </h2>
+              
+              </div>
+              
+                <p>Just Eat It!!</p>
+                
                 <p >Search, Save, and Track Expiring Foods
                 <br></br>
                 <br></br>
@@ -67,7 +72,7 @@ export default function About(props) {
                 Don't let food expire! "Eat It While It's Fresh!" expire! makes it easier, faster, and even more fun!
                 
               </p>
-            
+             
                 <button className={styles.button}
                   onClick={() => {
                     if (props.isLoggedIn) {

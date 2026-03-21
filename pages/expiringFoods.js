@@ -80,9 +80,12 @@ export default function ExpiringFoods(props) {
         username={props?.user?.username}
         onLogout={logout}
       />
-      <h1 className={styles.title}>Foods Expiring Soon</h1>
+      
       <main className={styles.mainExpiring}>
-        
+        <div className={styles.logoHead}>
+        <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
+        <h2>Foods Expiring Soon</h2>
+        </div>
 
         {loading ? (
           <p>Loading...</p>

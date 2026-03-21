@@ -1,22 +1,47 @@
 /*savedFoods css*/
 
 .container {
-    padding: 1rem;
+    width: 100%;
+    padding: 0 0rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .mainSaved {
+    padding: 2rem;
     background-color: white;
-    
+       
 }
+
+.logoHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    background-color: white;
+  }
+
+  .logo2 {display: flex;
+    width:100px;
+    
+   
+  }
+
+  .h2{
+    font-size: 35rem;
+    
+  }
+
 
 .savedGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 0.5fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px, 0.5fr));
     gap: 1rem;
     width: 100%;
     margin-top: 1rem;
   }
+
+  
 
 .savedCard {
     background-color:rgb(225, 225, 234);
@@ -28,10 +53,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    
 }
 
+
 .savedImage {
-    width: 50%;
+    height: 30%;
     border-radius: 4px;
     margin-bottom: 0.5rem; 
 }

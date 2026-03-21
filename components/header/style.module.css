@@ -1,7 +1,7 @@
 
 .container {
   display: flex;
-  padding: 10px 40px;
+  padding: 10px 50px;
   justify-content: space-between;
   gap: 30px;
   color: rgb(233, 231, 237);
@@ -57,7 +57,7 @@
     .container {
       display:flex;
       width:200%;
-      padding: 10px 20px;
+      padding: 20px 40px;
       flex-direction: row;
       gap: 20px;
     }
