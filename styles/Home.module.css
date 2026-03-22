@@ -78,6 +78,9 @@
   text-align: center;
   
 }
+.main h1 {
+  margin-top: 2rem;
+}
 
 .title {
   margin: 0 auto;
@@ -85,7 +88,7 @@
   font-size: 3rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 0px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(0.5px);
