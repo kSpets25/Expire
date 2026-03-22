@@ -46,7 +46,7 @@
     margin-top: 1rem,
   }
 
-  @media (max-width: 960px){
+  @media screen and (min-device-width: 320px) and (max-device-width: 960px){
 .mainAbout {
   width: 100%;
   padding: 0.5rem;

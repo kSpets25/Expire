@@ -6,7 +6,6 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-
 h2 {
   font-size: 40px;
   padding-left: 15px;
@@ -35,8 +34,6 @@ h5 {
   opacity: 0.5;
   z-index: -1
 }
-
-
 
 
 a {
