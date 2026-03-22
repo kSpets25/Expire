@@ -9,6 +9,7 @@ export default function Header(props) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    
     <header className={styles.container}>
       <div className={styles.logo}>
         <Link href="/">
