@@ -83,7 +83,7 @@
 
 
 .savedImage {
-    height: 40vh;
+    height: 30vh;
     border-radius: 4px;
     margin-bottom: 0.5rem; 
 }
@@ -119,4 +119,5 @@
       max-width: 800px;
       gap: 1px;
     }
+    
   }

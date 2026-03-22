@@ -88,7 +88,7 @@ export default function About(props) {
         
       </main>
 
-      <Footer className={styles.footer}/>
+        <Footer className={styles.footer}/>
     </div>
   );
 }

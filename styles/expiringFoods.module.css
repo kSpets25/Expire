@@ -94,9 +94,9 @@
     height: 35vh;
   }
 }
-@media (max-width: 1200px) {
-  .savedGrid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+@media (max-width: 900px) {
+  .expiringGrid {
+    grid-template-columns: repeat(250px, 1fr); /* 2 columns */
     max-width: 800px;
     gap: 1px;
   }

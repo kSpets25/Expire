@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
@@ -7,6 +6,7 @@ import { useRouter } from "next/router";
 import { withIronSessionSsr } from "iron-session/next";
 import sessionOptions from "../config/session";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps({ req }) {
@@ -64,7 +64,7 @@ export default function Login(props) {
         <h1 className={styles.title}>
           Login or Create an Account!
         </h1>
-
+        
         <p className={styles.description}>
           Current Location: <code className={styles.code}>{router.asPath}</code>
           <br />
@@ -73,7 +73,7 @@ export default function Login(props) {
             {!props.isLoggedIn && " Not"} Logged In
           </code>
         </p>
-
+        
         <form
           className={[styles.card, styles.form].join(" ")}
           onSubmit={handleLogin}
@@ -104,9 +104,7 @@ export default function Login(props) {
         </Link>
       </main>
 
-      <footer className={styles.footer}>
-       
-      </footer>
+      <Footer className={styles.footer}/>
     </div>
   );
 }
