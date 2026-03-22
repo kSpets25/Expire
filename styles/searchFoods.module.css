@@ -1,6 +1,5 @@
-
+/* Note: food card css located in FoodSearch Component*/
 .container {
-    display:block;
     padding: 0 0rem;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 
@@ -23,8 +22,8 @@
   }
 
   .logo2 {display: flex;
-    width:150px;
-    padding-top:  20px;
+    width:130px;
+    padding-top:  30px;
     padding-bottom: 20px;
    
   }
@@ -88,10 +87,10 @@
   .title {
     margin: 0;
     line-height: 1.15;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    padding-top: 2.2rem;
+    padding-top: 3rem;
     padding-left: 20px;
     
   }
@@ -112,8 +111,7 @@
     border-radius: 5px;
     padding: 0.75rem;
     font-size: 1.1rem;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif
   }
   
   .grid {
@@ -168,6 +166,7 @@
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.5;
+    
   }
   
   .logo {
