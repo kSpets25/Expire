@@ -28,34 +28,80 @@
   }
 
 .expiringGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 0.5fr));
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 350px));
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem auto;
+  max-width: 1200px;
+  background-color: #F44336;
   }
 
+
   .expiringCard {
-    background-color: rgb(225, 225, 234);
-    border: 1px solid #ccc;
+    background-color:rgb(225, 225, 234);
+    width: 350px;
+    border: 1px solid #697091;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+}
+.expiringCard h3 {
+  font-size: 1rem;
+  color: rgb(34, 158, 77);
 }
 
-.savedImage {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
+.expiringCard h5 {
+  font-size: 0.8rem;
+  color: black;
+  margin: 6px;
+}
+
+.expiringCard h6 {
+  font-size: 0.8rem;
+  margin: 6px;
+  
+  
+}
+
+.expiringCard p {
+  font-size: 0.6rem;
+  margin: 5px
+}
+
+
+.expiringImage {
+  height: 30vh;
+  border-radius: 4px;
+  margin-bottom: 0.5rem; 
+}
+.styleDate {
+  background-color: #faf4f3;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 960px){
   .mainExpiring {
-    width: 200%;
+    width: 100%;
+  }
+  .expiringImage {
+    height: 35vh;
   }
 }
+@media (max-width: 1200px) {
+  .savedGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    max-width: 800px;
+    gap: 1px;
+  }
+}
+
+
 
 

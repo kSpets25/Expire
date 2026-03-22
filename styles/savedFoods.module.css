@@ -9,7 +9,7 @@
 .mainSaved {
     padding: 2rem;
     background-color: white;
-       
+    
 }
 
 .logoHead {
@@ -31,21 +31,22 @@
     font-size: 35rem;
     
   }
-
-
 .savedGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 0.5fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 350px));
     width: 100%;
-    margin-top: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background-color: #F44336;
   }
 
   
 
 .savedCard {
     background-color:rgb(225, 225, 234);
-    width: 100%;
+    width: 350px;
     border: 1px solid #697091;
     border-radius: 8px;
     padding: 1rem;
@@ -54,12 +55,35 @@
     flex-direction: column;
     justify-content: space-between;
     
-    
+}
+
+.savedCard h3 {
+  font-size: 1rem;
+  color: rgb(34, 158, 77);
+}
+
+.savedCard h5 {
+  font-size: 0.8rem;
+  color: black;
+  margin: 6px;
+}
+
+.savedCard h6 {
+  font-size: 0.8rem;
+  margin: 6px;
+  
+  
+}
+
+.savedCard p {
+  font-size: 0.6rem;
+  margin: 5px
 }
 
 
+
 .savedImage {
-    height: 30%;
+    height: 40vh;
     border-radius: 4px;
     margin-bottom: 0.5rem; 
 }
@@ -82,5 +106,17 @@
   @media screen and (min-device-width: 320px) and (max-device-width: 960px){
     .mainSaved {
       width: 100%;
+    }
+
+    .savedImage {
+      height: 35vh;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .savedGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      max-width: 800px;
+      gap: 1px;
     }
   }

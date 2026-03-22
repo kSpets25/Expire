@@ -103,7 +103,7 @@ export default function ExpiringFoods(props) {
                   
                 >
                   {product.image_small_url && (
-                    <img className={styles.savedImage}
+                    <img className={styles.expiringImage}
                       src={product.image_small_url}
                       alt={product.product_name}
                      
@@ -111,14 +111,14 @@ export default function ExpiringFoods(props) {
                   )}
 
                   <h3>{product.product_name}</h3>
-                  <p>Brand: {product.brands || "Unknown"}</p>
-                  <p>Barcode: {product.code}</p>
-                  <p>Expiration Date: {new Date(product.expirationDate).toLocaleDateString()}</p>
-                  <p>
+                  <h5>Brand: {product.brands || "Unknown"}</h5>
+                  <h5>Barcode: {product.code}</h5>
+                  <h6>Expiration Date: {new Date(product.expirationDate).toLocaleDateString()}</h6>
+                  <h6>
                     Days left: <strong>{left}</strong>{" "}
                     {left === 1 ? "day" : "days"}
-                  </p>
-                  <div
+                  </h6>
+                  <div className={styles.styleDate}
                     style={{
                       fontWeight: "bold",
                       color: left <= 3 ? "#F44336" : "#FF9800",

@@ -103,7 +103,7 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
                       }}
                     >
                       {food.image_small_url && (
-                        <img className={styles.savedImmage}
+                        <img className={styles.savedImage}
                           src={food.image_small_url}
                           alt={food.product_name || "Product image" }
                           
@@ -111,10 +111,10 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
                       )}
 
                       <h3>{food.product_name}</h3>
-                      <p>Brand: {food.brands || "Unknown"}</p>
-                      <p>Barcode: {food.code}</p>
-                      <p>Quantity: {food.quantity} {food.unit}</p>
-                      <p>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</p>
+                      <h5>Brand: {food.brands || "Unknown"}</h5>
+                      <h5>Barcode: {food.code}</h5>
+                      <h6>Quantity: {food.quantity} {food.unit}</h6>
+                      <h6>Expiration Date: {new Date(food.expirationDate).toLocaleDateString()}</h6>
                       <p>Saved At: {new Date(food.createdAt).toLocaleString()}</p>
 
                       <button
