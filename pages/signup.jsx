@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function Signup(props) {
   const router = useRouter();
@@ -55,7 +56,7 @@ export default function Signup(props) {
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to the <a href="https://nextjs.org">Next.js</a> Login Page!
+          Sign Up To Get Started!
         </h1>
 
         <p className={styles.description}>
@@ -103,9 +104,7 @@ export default function Signup(props) {
         </Link>
       </main>
 
-      <footer className={styles.footer}>
-       
-      </footer>
+      <Footer className={styles.footer}/>
     </div>
   );
 }

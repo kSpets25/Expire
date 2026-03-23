@@ -61,12 +61,12 @@ export default function Login(props) {
       <Header isLoggedIn={props.isLoggedIn} username={props?.user?.username} />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Login or Create an Account!
-        </h1>
+        <h2 className={styles.title}>
+          Login To Start Tracking Expiring Foods!
+        </h2>
         
         <p className={styles.description}>
-          Current Location: <code className={styles.code}>{router.asPath}</code>
+          Get Started: <code className={styles.code}>{router.asPath}</code>
           <br />
           Status:{" "}
           <code className={styles.code}>
