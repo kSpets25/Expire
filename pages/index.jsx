@@ -65,16 +65,12 @@ export default function Home(props) {
                 router.push("/login");
               }
             }}
-            
           >
             Search Foods
           </button>
         </div>
       </main>
-
-      
       <Footer className={styles.footer}/>
-      
     </div>
   );
 }
