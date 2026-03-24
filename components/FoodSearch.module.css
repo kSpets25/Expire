@@ -174,17 +174,21 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px){
+@media screen and (min-width: 960px) and (max-width: 1200px){
     .image {
         height: 20.3vh;
     }
     .searchSection {
-        background-color: #8BC34A;
+        background-color: white;
         display: block;
         padding-top: 2px;
     }
 
 }
+
+
+
+
 
 
     

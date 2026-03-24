@@ -87,7 +87,7 @@
   margin-top: 20px;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 960px){
+@media screen and (min-device-width: 320px) and (max-device-width: 780px){
   .mainExpiring {
     width: 200%;
   }
@@ -96,11 +96,14 @@
   }
 
 }
-@media (max-width: 1200px) {
+@media screen and (min-device-width: 780) and (max-width: 1200px) {
   .expiringGrid {
     grid-template-columns: repeat(250px, 1fr); /* 2 columns */
     max-width: 800px;
-    
+  }
+
+  .expiringImage {
+    height: 30vh;
   }
 }
 

@@ -103,7 +103,7 @@
     transition: background-color 0.5s ease;
   }
 
-  @media screen and (min-device-width: 320px) and (max-device-width: 960px){
+  @media screen and (min-device-width: 320px) and (max-device-width: 780px){
     .mainSaved {
       width: 200%;
     }
@@ -111,10 +111,9 @@
     .savedImage {
       height: 35vh;
     }
-    
   }
 
-  @media (max-width: 1200px) {
+  @media screen and (min-device-width: 780) and (max-width: 1200px){
     .savedGrid {
       grid-template-columns: repeat(250px, 1fr); /* 2 columns */
       max-width: 800px;
