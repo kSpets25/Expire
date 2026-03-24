@@ -16,13 +16,15 @@
   background-size: cover;
   background-position: center;
   z-index: -1
+  
 }
 .main {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3rem;
+  
+  
 }
 
 .main h1 {
@@ -133,6 +135,7 @@
   flex-wrap: wrap;
   max-width: 800px;
   
+  
 }
 
 .card {
@@ -226,5 +229,9 @@
     flex-direction: column;
   }
 }
+
+
+
+
 
 
