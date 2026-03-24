@@ -8,7 +8,7 @@
 
 .mainSaved {
     padding: 2rem;
-    background-color: rgb(80, 171, 112);
+    background-color: #038C3E;
 
 }
 
@@ -39,13 +39,13 @@
     justify-content: center;
     margin: 1rem auto;
     max-width: 1200px;
-    background-color: #8d8484;
+    background-color: #fff;
   }
 
   
 
 .savedCard {
-    background-color:rgb(225, 225, 234);
+    background-color:#fff;
     width: 350px;
     border: 1px solid #697091;
     border-radius: 8px;
@@ -54,6 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 1rem
     
 }
 

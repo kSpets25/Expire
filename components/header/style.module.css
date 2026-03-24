@@ -7,7 +7,7 @@
   gap: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
   color: rgb(233, 231, 237);
-  background-color: #035273;
+  background-color: #025373;
   align-items: center;
   flex-wrap: wrap;
   
@@ -23,7 +23,7 @@
   justify-content: space-between;
   gap: 40px;
   color: rgb(233, 231, 237);
-  background-color: #035273;
+  background-color: #025373;
   align-items: center;
 }
 
@@ -61,7 +61,7 @@
     .container{
       display:flex;
       width: 200%;
-      background-color: #035273;
+      background-color: #025373;
       padding: 20px 40px;
       flex-direction: row;
       gap: 20px;
@@ -73,7 +73,7 @@
       font-size: 20px;
       padding: 0px 0;
       gap: 15px;
-      background-color: #035273;
+      background-color: #025373;
       
     }
     .menuButton {
@@ -86,7 +86,7 @@
       display: none;
       flex-direction: column;
       gap: 18px;
-      background-color: #035273;
+      background-color: #025373;
       position: absolute;
       top: 70px;
       left: 0;
