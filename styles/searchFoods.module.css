@@ -21,7 +21,8 @@
     
   }
 
-  .logo2 {display: flex;
+  .logo2 {
+    display: flex;
     width:130px;
     padding-top:  30px;
     padding-bottom: 20px;
@@ -192,7 +193,7 @@
     }
     .logo2 {
       width: 180px;
-      margin-left: 60px;;
+      margin-left: 60px;
       padding-left: 30px;
       
     }

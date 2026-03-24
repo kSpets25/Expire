@@ -88,6 +88,18 @@
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 780px){
+
+  .logoHead {
+    display:block;
+    text-align: center;
+    background-color: chocolate;
+  }
+
+  .logo2 {
+    display: block;
+    margin: 0 auto;
+  }
+
   .mainExpiring {
     width: 200%;
   }
