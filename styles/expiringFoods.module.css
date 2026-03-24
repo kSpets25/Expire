@@ -7,7 +7,7 @@
 
 
 .mainExpiring {
-    background-color: white;
+    background-color: rgb(139, 54, 54);
     padding: 2rem;
 }
 
@@ -36,7 +36,7 @@
   justify-content: center;
   margin: 1rem auto;
   max-width: 1200px;
-  background-color: #F44336;
+  background-color: #b5b2b2;
   }
 
 
