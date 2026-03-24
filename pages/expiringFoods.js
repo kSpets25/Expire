@@ -86,7 +86,10 @@ export default function ExpiringFoods(props) {
         <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
         <h2>Foods Expiring Soon</h2>
         </div>
-
+        <div className={styles.spaceBar}>
+          <>
+          </>
+        </div>
         {loading ? (
           <p>Loading...</p>
         ) : expiringFoods.length === 0 ? (

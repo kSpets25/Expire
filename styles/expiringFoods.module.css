@@ -7,25 +7,36 @@
 
 
 .mainExpiring {
-    background-color: #F2A516;
+    background-color: #fff;
     padding: 2rem;
 }
 
 .logoHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  background-color: white;
+}
+
+  .logo2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0388A6;
-    
+    width:130px; 
   }
 
-  .logo2 {display: flex;
-    width:100px;
-    padding-top:  20px;
-    padding-bottom: 20px;
-    margin-right: 10px;
-   
+  .logoHead h2{
+    font-size: 3rem;
   }
+
+  .spaceBar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    background-color: #038C3E;
+  }
+
 
 .expiringGrid {
   display: grid;
@@ -49,7 +60,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1rem;
+    
     
 }
 .expiringCard h3 {
@@ -92,7 +103,7 @@
   .logoHead {
     display:block;
     text-align: center;
-    background-color: chocolate;
+    padding-bottom: 0.5rem;
   }
 
   .logo2 {
@@ -100,11 +111,20 @@
     margin: 0 auto;
   }
 
+  .logoHead h2 {
+    font-size: 2.7rem;
+    margin: 20px;
+  }
+
   .mainExpiring {
     width: 200%;
   }
   .expiringImage {
     height: 35vh;
+  }
+
+  .spaceBar {
+    margin: 1rem, 5rem auto;
   }
 
 }

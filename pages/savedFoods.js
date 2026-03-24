@@ -89,6 +89,10 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
         <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
         <h2>Saved Foods</h2>
         </div>
+        <div className={styles.spaceBar}>
+          <>
+          </>
+        </div>
         {foods.length === 0 ? (
           <p>You have no saved foods yet.</p>
         ) : (
