@@ -5,11 +5,9 @@
     padding: 0 0rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-
 .mainSaved {
-    padding: 2rem;
-    
+    padding: 0rem;
+    padding-top: 20px;  
 }
 
 .logoHead {
@@ -17,7 +15,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 15px;
-  padding-bottom: 35px;
+  padding-bottom: 3px;
   background-color: white;
 }
 
@@ -32,11 +30,13 @@
 
   .spaceBar {
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    height: 2rem;
+    height: 1rem;
+    margin-bottom: 1rem;
     background-color: #038C3E;
+    opacity: 30%;
   }
 
 .savedGrid {
@@ -46,8 +46,11 @@
     gap: 1rem;
     justify-content: center;
     margin: 1rem auto;
+    margin-top: 0;
     max-width: 1200px;
     background-color: #fff;
+    
+   
   }
 
   
@@ -139,8 +142,8 @@
     }
 
     .spaceBar {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 150%;
+      
     }
   }
 

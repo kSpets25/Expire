@@ -174,7 +174,7 @@
     height: 1em;
     margin-left: 0.5rem;
   }
-  @media screen and (min-width: 320px) and (max-width: 920px){
+  @media screen and (min-width: 320px) and (max-width: 960px){
     
     .logoHead {
       display:block;
