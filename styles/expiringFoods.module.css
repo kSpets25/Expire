@@ -98,10 +98,20 @@
   margin-bottom: 0.5rem; 
 }
 .styleDate {
-  background-color: #faf4f3;
+  
+  padding: 4px;
   margin-bottom: 20px;
   margin-top: 20px;
+  
+
 }
+
+.viewButton {
+  color: white;
+  background-color: #038C3E;
+  padding: 4px
+}
+
 
 @media screen and (min-device-width: 320px) and (max-device-width: 780px){
 
