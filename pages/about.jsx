@@ -51,7 +51,7 @@ export default function About(props) {
               </h2>
               
               </div>
-              
+              <div className={styles.aboutText}>
                 <p>Just Eat It!!</p>
                 
                 <p >Search, Save, and Track Expiring Foods
@@ -72,7 +72,7 @@ export default function About(props) {
                 Don't let food expire! "Eat It While It's Fresh!" expire! makes it easier, faster, and even more fun!
                 
               </p>
-             
+              </div>
                 <button className={styles.button}
                   onClick={() => {
                     if (props.isLoggedIn) {

@@ -1,6 +1,11 @@
 
 .container {
     padding: 0rem;
+    
+  }
+
+  .main {
+    background-color: blue;
   }
   
   .mainAbout{
@@ -9,9 +14,7 @@
     width: 100%;
     display:block;
     text-align: center;
-    padding: 3rem;
-    
-    
+    padding: 3rem; 
   }
 
   .logoHead {
@@ -29,10 +32,17 @@
     margin-right: 10px;
    
   }
-
-  .mainAbout p {
+.aboutText {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  max-width: 70%
+}
+  
+  .aboutText p {
     text-align: left;
     width:80%
+    color
+    
   }
 
 .button {
@@ -50,14 +60,19 @@
 .mainAbout {
   width: 100%;
   padding: 0.5rem;
+ margin-bottom: 2rem;
+  
+}
+
+.aboutText {
+  padding-top: 0rem;
+  
 }
 
 .logoHead {
   padding-top: 30px;
 }
-
-
-  }
+}
 
   @media (max-width: 480px){
     .mainAbout {
