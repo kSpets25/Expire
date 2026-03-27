@@ -51,7 +51,6 @@
   background-color: #fff;
   }
 
-
   .expiringCard {
     background-color:rgb(225, 225, 234);
     width: 350px;
@@ -63,11 +62,9 @@
     flex-direction: column;
     justify-content: space-between;
     
-    
 }
 .expiringCard h3 {
   font-size: 1rem;
-  
 }
 
 .expiringCard h5 {
