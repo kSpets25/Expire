@@ -3,6 +3,7 @@
 
   display: flex;
   padding: 20px 50px;
+  padding-bottom: 0;
   justify-content: space-between;
   gap: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
@@ -18,10 +19,10 @@
   font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
   padding-top:  0px;
-  padding-left: 70px;
+  padding-left: 1rem;
   padding-right: 40px;
   justify-content: space-between;
-  gap: 40px;
+  gap: 1rem;
   color: rgb(233, 231, 237);
   background-color: #025373;
   align-items: center;
@@ -29,12 +30,13 @@
 
 .navText{
   font-size: 40px;
+  
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -56,7 +58,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 320px) and (max-width: 920px) {
+@media screen and (min-width: 320px) and (max-width: 960px) {
  
     .container{
       display:flex;
@@ -64,7 +66,7 @@
       background-color: #025373;
       padding: 20px 40px;
       flex-direction: row;
-      gap: 20px;
+      gap: 1rem;
     }
     
     .container1 {
@@ -79,6 +81,7 @@
     .menuButton {
       display: block;
       font-size: 30px;
+      margin-right: 50px;
       
     }
   
@@ -98,3 +101,11 @@
       display: flex;
     }
   }
+
+  
+
+  
+
+  
+
+  

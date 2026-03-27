@@ -38,7 +38,7 @@
     justify-content: center;
     align-items: center;
     height: 1rem;
-    background-color: #038C3E;
+    background-color: #0388Ac;
     opacity: 30%
   }
 
@@ -70,7 +70,7 @@
 }
 .expiringCard h3 {
   font-size: 1rem;
-  color: rgb(34, 158, 77);
+  
 }
 
 .expiringCard h5 {
@@ -108,7 +108,7 @@
 
 .viewButton {
   color: white;
-  background-color: #038C3E;
+  background-color: #0388Ac;
   padding: 4px
 }
 
