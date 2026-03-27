@@ -14,6 +14,19 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
+.mainHome {
+  background-image: url('/images/soup4.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  justify-items: center;
+  content: '';
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 p {
   font-size: 18px;
 }
