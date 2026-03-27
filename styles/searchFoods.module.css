@@ -2,7 +2,6 @@
 .container {
     padding: 0 0rem;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-
   }
 
   .mainSearch {
@@ -12,7 +11,6 @@
     top: 0px;
     left: 0;
     height: 80vh;
-   
     
   }
   .logoHead {
@@ -43,9 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
-  
   
   .buttonSearch {
     padding: 1rem 2rem;
@@ -93,7 +89,6 @@
     font-weight: bold;
     padding-top: 3rem;
     padding-left: 20px;
-    
   }
   
   .title,
@@ -167,7 +162,6 @@
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.5;
-    
   }
   
   .logo {
@@ -201,10 +195,8 @@
     .mainSearch {
       width: 200%;
       background-color: white;
-     
     }
 
-    
   }
   
   

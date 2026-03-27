@@ -19,59 +19,52 @@
   background-color: white;
 }
 
-  .logo2 {
-    display: flex;
-    width:100px; 
-  }
+.logo2 {
+  display: flex;
+  width:100px; 
+}
 
-  .logoHead h2{
-    font-size: 3rem;
-  }
+.logoHead h2{
+  font-size: 3rem;
+}
 
-  .spaceBar {
-    max-width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    height: 1rem;
-    margin-bottom: 1rem;
-    background-color: #f27830;
-    opacity: 30%;
-  }
+.spaceBar {
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f27830;
+  opacity: 30%;
+}
 
 .savedGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 350px));
-    width: 100%;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1rem auto;
-    margin-top: 0;
-    max-width: 1200px;
-    background-color: #fff;
-    
-   
-  }
-
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 350px));
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem auto;
+  margin-top: 0;
+  max-width: 1200px;
+  background-color: #fff;
+}
 
 .savedCard {
-    background-color:#fff;
-    width: 350px;
-    border: 1px solid #697091;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    
+  background-color:#fff;
+  width: 350px;
+  border: 1px solid #697091;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .savedCard h3 {
   font-size: 1rem;
-  
 }
 
 .savedCard h5 {
@@ -83,8 +76,6 @@
 .savedCard h6 {
   font-size: 0.8rem;
   margin: 6px;
-  
-  
 }
 
 .savedCard p {
@@ -114,49 +105,45 @@
   }
 
   @media screen and (min-device-width: 320px) and (max-device-width: 780px){
-    .logoHead {
-      display:block;
-      text-align: center;
-      padding-bottom: 0.5rem;
-      
-    }
-
-    .logo2 {
-      display: block;
-      margin: 0 auto;
-      
-    }
-
-    .logoHead h2 {
-      font-size: 2.6rem;
-      margin: 15px;
-    }
-
-    
-    .mainSaved {
-      width: 200%;
-    }
-
-    .savedImage {
-      height: 35vh;
-    }
-
-    .spaceBar {
-      max-width: 150%;
-      
-    }
+  .logoHead {
+    display:block;
+    text-align: center;
+    padding-bottom: 0.5rem; 
   }
 
-  @media screen and (min-device-width: 780) and (max-width: 1200px){
-    
-    
-    .savedGrid {
-      grid-template-columns: repeat(250px, 1fr); /* 2 columns */
-      max-width: 800px;
-    }
+  .logo2 {
+    display: block;
+    margin: 0 auto;
+  }
 
-    .savedImage {
-      height: 30vh;
-    }
+  .logoHead h2 {
+    font-size: 2.6rem;
+    margin: 15px;
+  }
+  
+  .mainSaved {
+    width: 200%;
+  }
+
+  .savedImage {
+    height: 35vh;
+  }
+
+  .spaceBar {
+    max-width: 150%;
     
   }
+}
+
+@media screen and (min-device-width: 780) and (max-width: 1200px){
+
+  .savedGrid {
+    grid-template-columns: repeat(250px, 1fr); /* 2 columns */
+    max-width: 800px;
+  }
+
+  .savedImage {
+    height: 30vh;
+  }
+  
+}

@@ -1,6 +1,5 @@
 
 .container {
-
   display: flex;
   padding: 20px 50px;
   padding-bottom: 0;
@@ -11,7 +10,6 @@
   background-color: #025373;
   align-items: center;
   flex-wrap: wrap;
-  
 }
 
 .container1{
@@ -30,7 +28,6 @@
 
 .navText{
   font-size: 40px;
-  
 }
 
 .navigation {
@@ -51,7 +48,6 @@
 }
 .menuButton {
   display:none;
-  
 }
 
 .open {    

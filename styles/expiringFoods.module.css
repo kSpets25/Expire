@@ -3,10 +3,8 @@
 .container {
   width: 100%;
     padding: 0 0rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;  
 }
-
 
 .mainExpiring {
     background-color: #fff;
@@ -41,7 +39,6 @@
     background-color: #0388Ac;
     opacity: 30%
   }
-
 
 .expiringGrid {
   display: grid;
@@ -82,8 +79,6 @@
 .expiringCard h6 {
   font-size: 0.8rem;
   margin: 6px;
-  
-  
 }
 
 .expiringCard p {

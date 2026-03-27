@@ -3,7 +3,6 @@
 .container {
     padding: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-
 }
 
 .searchSection {
@@ -15,17 +14,14 @@
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-
 }
-
 
 .input {
     width: 13rem;
     height: 2rem;
     margin-right: 0.1rem;
     padding: 6px;
-    border-radius: 6px;
-    
+    border-radius: 6px;   
 }
 
 .inputTwo {
@@ -60,9 +56,7 @@
 /*search results brand and barcode*/
 .card p {
     font-size: 20px;
-    margin: 3px;
-    
-    
+    margin: 3px; 
 }
 
 .image {
@@ -73,14 +67,12 @@
     color: #fff;
     font-weight: bold;
     margin-bottom: 0.5;
-
 }
 /* .smallInput*/
 
 .callendar {
     margin-bottom: 0.5rem;
-    width: 180px;
-    
+    width: 180px;  
 }
 .smallInput { 
     margin-bottom: 0.5rem;
@@ -90,20 +82,17 @@
 .select {
     margin-bottom: 0.5rem;
     width: 120px;
-
 }
 
 .nutriScore {
     display: inline-block;
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
-    
     color: #fff;
     font-weight: bold;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-
-  }
+}
 
 .a { background-color: #4CAF50;}
 .b { background-color: #8BC34A;}
@@ -113,14 +102,11 @@
 
 .default {background-color: #ccc; color: #000;}
 
-
-
 .dateInput {
     margin-bottom: 0.5;
 }
 
 .button {
-
     width: 7rem;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
@@ -129,7 +115,6 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-
 }
 
 .button:hover {
@@ -145,7 +130,6 @@
   width: 150px;
   animation: moveAcross 10s linear infinite;
 }
-
 
 @keyframes moveAcross {
   from {
