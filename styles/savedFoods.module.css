@@ -93,8 +93,8 @@
 }
 
 .savedImage {
-    height: 30vh;
-    border-radius: 4px;
+    height: 37vh;
+    max-width: 15rem;
     margin-bottom: 0.5rem; 
 }
 
