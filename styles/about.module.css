@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    margin-bottom: 2rem;
     
   }
 
@@ -30,13 +31,19 @@
 .aboutText {
   padding-top: 2rem;
   padding-bottom: 1rem;
-  max-width: 70%
+  margin-bottom: 1rem;
+  max-width: 80%;
+  background-color: rgb(225, 225, 234);
 }
   
   .aboutText p {
     text-align: left;
+    padding-left:  2rem;
+    padding-right: 2rem;
     width:80%
     color
+    
+    
   }
 
 .button {

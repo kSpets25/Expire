@@ -2,14 +2,14 @@
 
 .container {
   width: 100%;
-    padding: 0 0rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
+  padding: 0 0rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;  
 }
 
 .mainExpiring {
-    background-color: #fff;
-    padding: 0rem;
-    padding-top: 20px;
+  background-color: #fff;
+  padding: 0rem;
+  padding-top: 20px;
 }
 
 .logoHead {
@@ -119,8 +119,8 @@
   }
 
   .logoHead h2 {
-    font-size: 2.7rem;
-    margin: 20px;
+    font-size: 2.6rem;
+    margin: 15px;
   }
 
   .mainExpiring {
