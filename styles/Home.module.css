@@ -13,8 +13,8 @@
   background-size: cover;
   background-position: center;
   z-index: -1
-  
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -118,6 +118,7 @@
   font-size: 1.1rem;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
+
 .description, .code {
   margin-top: 2rem;
   margin-bottom: 1.9rem;

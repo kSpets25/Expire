@@ -24,13 +24,11 @@
     width:130px;
     padding-top:  30px;
     padding-bottom: 20px;
-   
   }
   
   .h1 {
     font-size: 35rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
   }
   
   .main {
@@ -174,24 +172,24 @@
       display:block;
       justify-content: center;
       align-items: center;
-      
     }
+
     .grid {
       width: 100%;
       flex-direction: column;
     }
+
     .title {
       font-size: 50px;
       padding: 0px;
-      
     }
+
     .logo2 {
       width: 180px;
       margin-left: 60px;
       padding-left: 30px;
-      
     }
-    
+
     .mainSearch {
       width: 200%;
       background-color: white;

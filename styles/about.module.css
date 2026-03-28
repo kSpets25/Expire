@@ -17,8 +17,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    margin-bottom: 2rem;
-    
+    margin-bottom: 2rem; 
   }
 
   .logo2 {display: flex;
@@ -43,9 +42,7 @@
     padding-left:  2rem;
     padding-right: 2rem;
     width:80%
-    color
-    
-    
+    color 
   }
 
 .button {
@@ -63,19 +60,17 @@
 .mainAbout {
   width: 100%;
   padding: 0.5rem;
-  padding-top: 1rem;
-  
-  
+  padding-top: 1rem; 
 }
 
 .aboutText {
   padding-top: 1rem;
-  
 }
 
 .logoHead {
   padding-top: 30px;
 }
+
 }
 
 @media (max-width: 480px){

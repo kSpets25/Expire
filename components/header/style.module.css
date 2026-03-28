@@ -46,6 +46,7 @@
   transform: scale(1.1);
   opacity: 0.8;
 }
+
 .menuButton {
   display:none;
 }
@@ -77,8 +78,7 @@
     .menuButton {
       display: block;
       font-size: 30px;
-      margin-right: 50px;
-      
+      margin-right: 50px; 
     }
   
     .navigation {

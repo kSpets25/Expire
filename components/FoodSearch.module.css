@@ -4,7 +4,7 @@
     padding: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
-
+/* search page search fields */
 .searchSection {
     display: block;
     margin-bottom: 1rem;
@@ -35,8 +35,6 @@
     gap: 1rem;
 }
 
-
-
 .card {
     background-color: rgb(225, 225, 234);
     border: 1px solid #ccc;
@@ -47,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 /*search results food name*/
 .card h3 {
     font-size: 20px;
@@ -121,6 +120,7 @@
     opacity: 0.9;
 }
 
+/* moving homepage foodtruck*/
 .movingImage {
   position: fixed;
   width: 120;
@@ -160,8 +160,7 @@
 
 @media screen and (min-width: 790px) and (max-width: 1080px){
     .image {
-        height: 25vh;
-       
+        height: 25vh; 
     }
     .searchSection {
         background-color: #8BC34A;;
