@@ -34,6 +34,8 @@
   margin-bottom: 1rem;
   max-width: 80%;
   background-color: rgb(225, 225, 234);
+  border-radius: 20px;
+  border-color: black;
 }
   
   .aboutText p {
@@ -61,12 +63,13 @@
 .mainAbout {
   width: 100%;
   padding: 0.5rem;
- margin-bottom: 2rem;
+  padding-top: 1rem;
+  
   
 }
 
 .aboutText {
-  padding-top: 0rem;
+  padding-top: 1rem;
   
 }
 
