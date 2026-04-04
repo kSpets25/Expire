@@ -114,7 +114,7 @@ export default function ExpiringFoods(props) {
                   )}
 
                   <h3>{product.product_name}</h3>
-                  <h5>Brand: {product.brands || "Unknown"}</h5>
+                  <h4>Brand: {product.brands || "Unknown"}</h4>
                   <h5>Barcode: {product.code}</h5>
                   <h6>Expiration Date: {new Date(product.expirationDate).toLocaleDateString()}</h6>
                   <h6>

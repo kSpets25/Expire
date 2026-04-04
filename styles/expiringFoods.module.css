@@ -67,6 +67,12 @@
   font-size: 1rem;
 }
 
+.expiringCard h4 {
+  font-size: 0.8rem;
+  color: black;
+  margin: 6px;
+}
+
 .expiringCard h5 {
   font-size: 0.8rem;
   color: black;
@@ -125,7 +131,7 @@
     width: 200%;
   }
   .expiringImage {
-    height: 35vh;
+    height: 37vh;
   }
 
   .spaceBar {
