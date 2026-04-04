@@ -7,14 +7,13 @@
     display: flex;
     flex: 1;
     justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    align-items: 20px;
+    padding-bottom: 20px;
   }
-
-  .h5 {
-    font-size: 20px;
+  .footer h5 {
+    font-size: 15px;
     color: aliceblue;
+    
   }
 
   .footer a {
