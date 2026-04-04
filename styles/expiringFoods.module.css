@@ -21,7 +21,8 @@
   background-color: white;
 }
 
-.logo2 {display: flex;
+.logo2 {
+  display: flex;
   width:100px;
   padding-top:  20px;
   padding-bottom: 20px;
@@ -33,13 +34,14 @@
 }
 
 .spaceBar {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   height: 1rem;
+  margin-bottom: 1rem;
   background-color: #0388Ac;
-  opacity: 30%
+  opacity: 30%;
 }
 
 .expiringGrid {
@@ -49,7 +51,7 @@
   gap: 1rem;
   justify-content: center;
   margin: 1rem auto;
-  margin-top: 10;
+  margin-top: 0px;
   max-width: 1200px;
   background-color: white;
   }
