@@ -37,7 +37,13 @@
   flex-wrap: wrap;
 }
 
+.logo {
+  position: relative;
+}
+
 .homeImg {
+  width: 170px;
+  height: 45px;
   padding-bottom: 0px;
   border-radius: 8px;
   transition: 0.2s;
