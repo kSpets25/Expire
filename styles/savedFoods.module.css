@@ -20,9 +20,11 @@
   background-color: white;
 }
 
-.logo2 {
-  display: flex;
-  width:100px; 
+.logo2 {display: flex;
+  width:100px;
+  padding-top:  20px;
+  padding-bottom: 20px;
+  margin-right: 10px;
 }
 
 .logoHead h2{
