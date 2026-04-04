@@ -5,6 +5,7 @@
   padding: 0 0rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .mainSaved {
   background-color: #ffffff;
   padding: 0rem;
@@ -49,9 +50,9 @@
   gap: 1rem;
   justify-content: center;
   margin: 1rem auto;
-  margin-top: 0;
+  margin-top: 0px;
   max-width: 1200px;
-  background-color: #fff;
+  background-color: white;
 }
 
 .savedCard {
@@ -94,7 +95,7 @@
 
 .savedImage {
     height: 37vh;
-    max-width: 15rem;
+    border-radius: 4px;
     margin-bottom: 0.5rem; 
 }
 
@@ -151,7 +152,7 @@
   }
 
   .savedImage {
-    height: 35vh;
+    height: 30vh;
   }
   
 }
