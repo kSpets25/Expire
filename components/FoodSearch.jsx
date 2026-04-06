@@ -118,7 +118,7 @@ export default function FoodSearch() {
         return copy;
       });
   
-      alert("Food item saved. View on your saved foods page!");
+      alert("Food item saved. View on the saved foods page!");
     } catch (err) {
       console.error("Error saving food:", err);
       alert("Error saving food item: " + err.message);
