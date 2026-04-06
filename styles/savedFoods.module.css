@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   height: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   background-color: #cc5c1a;
   opacity: 30%;
 }
@@ -52,7 +52,7 @@
   gap: 1rem;
   justify-content: center;
   margin: 1rem auto;
-  margin-top: 0px;
+  margin-top: 2rem;
   max-width: 1200px;
   background-color: white;
 }
