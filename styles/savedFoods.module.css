@@ -111,10 +111,6 @@
     cursor: pointer;
 }
 
-.savedCard.highlight {
-    background-color: #65655e;
-    transition: background-color 0.5s ease;
-  }
 
   @media screen and (min-device-width: 320px) and (max-device-width: 780px){
   .logoHead {

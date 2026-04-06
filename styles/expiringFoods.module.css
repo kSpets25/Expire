@@ -98,12 +98,10 @@
 
 .expiringImage {
   height: 37vh;
-  
   border-radius: 4px;
   margin-bottom: 0.5rem; 
 }
 .styleDate {
-  
   padding: 4px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -139,6 +137,7 @@
   }
   .expiringImage {
     height: 35vh;
+    max-width: 100%;
   }
 
   .spaceBar {
