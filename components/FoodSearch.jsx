@@ -86,7 +86,7 @@ export default function FoodSearch() {
   
     const exists = saved.some((p) => p.code === product.code);
     if (exists) {
-      alert("Product already saved");
+      alert("Product saved");
       return;
     }    
     
@@ -118,7 +118,7 @@ export default function FoodSearch() {
         return copy;
       });
   
-      alert("Food item saved!");
+      alert("Food item saved. View on your saved foods page!");
     } catch (err) {
       console.error("Error saving food:", err);
       alert("Error saving food item: " + err.message);
