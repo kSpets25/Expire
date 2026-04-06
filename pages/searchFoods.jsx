@@ -49,9 +49,9 @@ export default function SearchFoods(props) {
       <main className={styles.mainSearch}>
       <div className={styles.logoHead}>
         <img className={styles.logo2} src="/images/logoSearch.png" alt="A description of the image"></img>
-          <h1 className={styles.title}>
+          <h2 className={styles.title}>
             Search Foods 
-          </h1>
+          </h2>
        </div> 
        
         <h3>Enter the Name or Barcode</h3>

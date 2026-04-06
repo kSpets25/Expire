@@ -17,20 +17,21 @@
   align-items: center;
   justify-content: center;
   padding-top: 15px;
-  padding-bottom: 3px;
+  padding-bottom: 1.2rem;
   background-color: white;
 }
 
 .logo2 {
   display: flex;
-  width:100px;
+  height: 18vh;
+  max-width: 100%;
   padding-top:  20px;
   padding-bottom: 20px;
   margin-right: 10px;
 }
 
 .logoHead h2{
-  font-size: 3rem;
+  font-size: 2.0rem;
 }
 
 .spaceBar {
@@ -39,7 +40,7 @@
   justify-content: center;
   align-items: center;
   height: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   background-color: #0388Ac;
   opacity: 30%;
 }
@@ -51,7 +52,7 @@
   gap: 1rem;
   justify-content: center;
   margin: 1rem auto;
-  margin-top: 0px;
+  margin-top: 2rem;
   max-width: 1200px;
   background-color: white;
   }
@@ -97,6 +98,7 @@
 
 .expiringImage {
   height: 37vh;
+  
   border-radius: 4px;
   margin-bottom: 0.5rem; 
 }

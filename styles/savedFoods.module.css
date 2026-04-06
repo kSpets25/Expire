@@ -17,20 +17,21 @@
   align-items: center;
   justify-content: center;
   padding-top: 15px;
-  padding-bottom: 3px;
+  padding-bottom: 1.2rem;
   background-color: white;
 }
 
 .logo2 {
   display: flex;
-  width:100px;
+  height: 18vh;
+  max-width: 100%;
   padding-top:  20px;
   padding-bottom: 20px;
   margin-right: 10px;
 }
 
 .logoHead h2{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .spaceBar {

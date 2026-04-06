@@ -146,9 +146,7 @@ export default function ExpiringFoods(props) {
           </div>
         )}
       </main>
-      <>
       <Footer className={styles.footer}/>
-      </>
     </div>
   );
 }
