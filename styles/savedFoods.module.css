@@ -96,6 +96,7 @@
 }
 
 .savedImage {
+  object-fit: contain;
   height: 40vh;
   border-radius: 4px;
   margin-bottom: 0.5rem; 
