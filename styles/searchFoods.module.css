@@ -42,7 +42,7 @@
   
   .buttonSearch {
     padding: 1rem 2rem;
-    background-color: #018c45;
+    background-color: #033d1f;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -120,8 +120,8 @@
     text-align: left;
     color: inherit;
     text-decoration: none;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
+    border: 1px solid #697091;
+    border-radius: 8px;
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 350px;
   }
