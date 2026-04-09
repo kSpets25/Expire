@@ -93,9 +93,9 @@ export default function SavedFoods({ foods = [], user, isLoggedIn }) {
           <>
           </>
         </div>
-        {foods.length === 0 ? (
-          <p>You have no saved foods yet.</p>
-        ) : (
+          {foods.length === 0 ? (
+            <p className={styles.noticeText}>You have no saved foods yet.</p>
+          ) : (
                 <div className={styles.savedGrid}
                   
                 >

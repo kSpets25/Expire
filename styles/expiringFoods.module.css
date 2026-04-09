@@ -78,6 +78,11 @@
   margin: 6px;
 }
 
+.noticeText {
+  margin-left: 60px;
+  
+}
+
 .expiringCard h5 {
   font-size: 0.8rem;
   color: black;

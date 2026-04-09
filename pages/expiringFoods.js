@@ -93,10 +93,9 @@ export default function ExpiringFoods(props) {
         {loading ? (
           <p>Loading...</p>
         ) : expiringFoods.length === 0 ? (
-          <p>No foods are expiring in the next 14 days.</p>
+          <p className={styles.noticeText}>No foods are expiring in the next 14 days.</p>
         ) : (
-          <div className={styles.expiringGrid}
-            
+          <div className={styles.expiringGrid} 
           >
             {expiringFoods.map((product) => {
               const left = daysLeft(product.expirationDate);
