@@ -87,8 +87,6 @@ export default function ExpiringFoods(props) {
         <h2>Foods Expiring Soon</h2>
         </div>
         <div className={styles.spaceBar}>
-          <>
-          </>
         </div>
         {loading ? (
           <p>Loading...</p>
