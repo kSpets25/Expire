@@ -17,11 +17,13 @@
 }
 
 .input {
-    width: 13rem;
-    height: 2rem;
+    width: 14rem;
+    padding-bottom: 6rem;
+    height: 2.1rem;
     margin-right: 0.1rem;
-    padding: 6px;
-    border-radius: 6px;   
+    padding: 7px;
+    border-radius: 6px; 
+     
 }
 
 .inputTwo {
@@ -108,14 +110,16 @@
 
 .button {
     width: 7rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    margin-top: 0.3rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
     background-color: green;
     color: #fff;
+    letter-spacing: 0.4px;;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-}
+}   
 
 .button:hover {
     opacity: 0.9;
