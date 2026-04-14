@@ -33,7 +33,7 @@ export default function Home(props) {
           name="description"
           content="Search for foods and save them with expiration dates"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon1.png" />
       </Head>
 
       {/* Header with props */}
