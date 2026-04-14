@@ -28,7 +28,7 @@ export default function About(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>About Ua</title>
+        <title>About Us</title>
         <meta
           name="description"
           content="Search for foods and save them with expiration dates"
