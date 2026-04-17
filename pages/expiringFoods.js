@@ -121,7 +121,7 @@ export default function ExpiringFoods(props) {
                   <div className={styles.styleDate}
                     style={{
                       fontWeight: "bold",
-                      color: left <= 3 ? "#F44336" : "#FF9800",
+                      color: left <= 4 ? "#F44336" : "#FF9800",
                     }}
                   >
                     ⏰  {left <= 0 ? "Expired!" : `${left} day${left > 1 ? "s" : ""} remaining`}
