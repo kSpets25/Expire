@@ -37,4 +37,26 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contributing
+
+Contributions are always welcome.
+
+Ways to Contribute:**
+**Report Bugs:**
+**Report Bugs and Request Fixes:** Open an issue. Email - [here](expirek2@gmail.com).
+- **Add Features:** Open a Pull Request! Please discuss major changes in an issue first.
+
+1. Fork the Project 
+2. Create your Feature Branch (`branch names should follow this format: type/short-description (e.g. feature/add-search, fix/login-error)`)(`git checkout -b feature/for new features, fix/ for bug fixes, and docs/ for documentation`)
+3. Commit your Changes (`git commit -m `)
+4. Push to the Branch (`git push origin `)
+5. Open a Pull Request
+
+Guidelines: Please follow current naming conventions. Use prefixes based on the type of change: 
+
+
+
+
+
+
 
