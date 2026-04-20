@@ -32,7 +32,6 @@ export const getServerSideProps = withIronSessionSsr(
   sessionOptions
 );
 
-
 export default function SearchFoods(props) {
   const router = useRouter();
   const logout = useLogout();
@@ -59,7 +58,6 @@ export default function SearchFoods(props) {
 
       </main>
 
-      
     </div>
   );
 }
